@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="ImagNipr" default="jar" basedir=".">
+	<taskdef resource="net/sf/antcontrib/antlib.xml">
+		<classpath>
+			<pathelement location="/usr/share/java/ant/ant-contrib.jar" />
+		</classpath>
+	</taskdef>
+
+	<property environment="env"/>
+	<property file="../../../../build.properties"/>
+		
+	<property name="src.dir" location="." />
+	<property name="jar.name" value="ImagNipr.jar" />
+	<property name="jar.path" location="../../../../plugins/${jar.name}" />
+	
+	<property name="test.src.dir" location="../../test/src/ImagNipr" />
+	<property name="test.bin.dir" location="../../test/bin" />
+	<property name="test.class.name" value="org.iugonet.www.ImagNipr" />
+	
+	<path id="classpath">
+		<pathelement location="${src.dir}" />
+		<pathelement location="${lib.dir}/Aplot.jar" />
+		<pathelement location="${lib.dir}/Tplot.jar" />
+		<pathelement location="${ext.dir}/${jfreechart.jar}" />
+		<pathelement location="${ext.dir}/${jcommon.jar}" />
+		<pathelement location="${ext.dir}/${cdfjava.jar}" />
+	</path>
+			
+	<path id="test.classpath">
+		<pathelement path="./test/bin/org/iugonet/www" />
+		<pathelement location="${test.bin}" />
+		<pathelement location="${ext.dir}/${junit.jar}" />
+		<pathelement location="${lib.dir}/Aplot.jar" />
+		<pathelement location="${lib.dir}/Tplot.jar" />
+		<pathelement location="${ext.dir}/${jfreechart.jar}" />
+		<pathelement location="${ext.dir}/${jcommon.jar}" />
+		<pathelement location="${ext.dir}/${cdfjava.jar}" />
+	</path>
+			
+	<!-- -->
+	
+	<target name="jar" depends="clean,compile" description="Jar">
+		<jar jarfile="${jar.path}">
+			<fileset dir="${src.dir}" includes="**/*.java" />
+			<fileset dir="${bin.dir}" includes="**/*.class" />
+			<manifest>
+				<attribute name="Plugin-Class" value="ImagNipr" />	
+			</manifest>	
+		</jar>
+	</target>
+	
+	<target name="compile" description="Compile">
+		<subant target="compile">
+			<fileset file="../../../Tplot/build.xml" />
+		</subant>
+		<subant target="jar">
+			<fileset file="../../../Tplot/build.xml" erroronmissingdir="false" />
+		</subant>
+		<mkdir dir="${bin.dir}" />
+		<javac srcdir="${src.dir}" destdir="${bin.dir}" includeantruntime="false" classpathref="classpath" />
+	</target>
+
+	<target name="clean" description="Clean">
+        <if>
+            <available file="${jar.path}" type="file" />
+            <then>
+                <delete file="${jar.path}" />
+            </then>
+        </if>
+        <if>
+            <available file="${bin.dir}" type="dir" />
+            <then>
+                <delete dir="${bin.dir}" />
+            </then>
+        </if>
+        <if>
+            <available file="${test.bin.dir}" type="dir" />
+            <then>
+                <delete dir="${test.bin.dir}" />
+            </then>
+        </if>
+        <if>
+            <available file="${javadoc.dir}" type="dir" />
+            <then>
+                <delete dir="${javadoc.dir}" />
+            </then>
+        </if>
+	</target>
+
+	<target name="javadoc" description="Javadoc">
+		<javadoc destdir="${javadoc.dir}">
+			<fileset dir="${src.dir}" />
+		</javadoc>
+	</target>
+	
+	<target name="test" depends="compile" description="Test">
+		<junit fork="yes">
+			<formatter type="plain" usefile="false" />
+			<classpath refid="test.classpath" />
+		</junit>
+	</target>
+
+</project>

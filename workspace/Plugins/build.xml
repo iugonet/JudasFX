@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="Plugins" default="jar" basedir=".">
+	<taskdef resource="net/sf/antcontrib/antlib.xml" />
+	
+	<property environment="env"/>
+	<property file="../../build.properties"/>
+	
+	<condition property="have.plugins">
+		<available file="../../plugins" />
+	</condition>
+	
+	<target name="createFolder" unless="have.plugins" description="CreateFolder">
+		<mkdir dir="../../plugins" />
+	</target>
+	
+	<target name="jar" depends="createFolder" description="Jar">
+		<subant target="jar">
+			<fileset file="src/ACE/build.xml" />
+			<fileset file="src/DstIndex/build.xml" />
+			<fileset file="src/GOES/build.xml" />
+			<fileset file="src/Iprt/build.xml" />
+			<fileset file="src/MU/build.xml" />
+			<fileset file="src/PoesTxt/build.xml" />
+			<fileset file="src/Wdc/build.xml" />
+			<fileset file="src/AeIndex/build.xml" />
+			<fileset file="src/Eiscat/build.xml" />
+			<fileset file="src/HfTohokuu/build.xml" />
+			<fileset file="src/Lfrto/build.xml" />
+			<fileset file="src/NoaaBi/build.xml" />
+			<fileset file="src/SuperDARN/build.xml" />
+			<fileset file="src/Cira86Ascii/build.xml" />
+			<fileset file="src/FmagNipr/build.xml" />
+			<fileset file="src/ImagNipr/build.xml" />
+			<fileset file="src/Mm210/build.xml" />
+			<fileset file="src/NoaaPower/build.xml" />
+			<fileset file="src/SymIndex/build.xml" />
+			<fileset file="src/WIND/build.xml" />
+			<fileset file="src/GeneralImage/build.xml" />
+		</subant>
+	</target>
+	
+	<target name="compile" description="Compile">
+		<subant target="compile">
+			<fileset file="src/ACE/build.xml" />
+			<fileset file="src/DstIndex/build.xml" />
+			<fileset file="src/GOES/build.xml" />
+			<fileset file="src/Iprt/build.xml" />
+			<fileset file="src/MU/build.xml" />
+			<fileset file="src/PoesTxt/build.xml" />
+			<fileset file="src/Wdc/build.xml" />
+			<fileset file="src/AeIndex/build.xml" />
+			<fileset file="src/Eiscat/build.xml" />
+			<fileset file="src/HfTohokuu/build.xml" />
+			<fileset file="src/Lfrto/build.xml" />
+			<fileset file="src/NoaaBi/build.xml" />
+			<fileset file="src/SuperDARN/build.xml" />
+			<fileset file="src/Cira86Ascii/build.xml" />
+			<fileset file="src/FmagNipr/build.xml" />
+			<fileset file="src/ImagNipr/build.xml" />
+			<fileset file="src/Mm210/build.xml" />
+			<fileset file="src/NoaaPower/build.xml" />
+			<fileset file="src/SymIndex/build.xml" />
+			<fileset file="src/WIND/build.xml" />
+			<fileset file="src/GeneralImage/build.xml" />
+		</subant>	
+	</target>
+	
+	<target name="clean" description="Clean">
+		<subant target="clean">
+			<fileset file="src/ACE/build.xml" />
+			<fileset file="src/DstIndex/build.xml" />
+			<fileset file="src/GOES/build.xml" />
+			<fileset file="src/Iprt/build.xml" />
+			<fileset file="src/MU/build.xml" />
+			<fileset file="src/PoesTxt/build.xml" />
+			<fileset file="src/Wdc/build.xml" />
+			<fileset file="src/AeIndex/build.xml" />
+			<fileset file="src/Eiscat/build.xml" />
+			<fileset file="src/HfTohokuu/build.xml" />
+			<fileset file="src/Lfrto/build.xml" />
+			<fileset file="src/NoaaBi/build.xml" />
+			<fileset file="src/SuperDARN/build.xml" />
+			<fileset file="src/Cira86Ascii/build.xml" />
+			<fileset file="src/FmagNipr/build.xml" />
+			<fileset file="src/ImagNipr/build.xml" />
+			<fileset file="src/Mm210/build.xml" />
+			<fileset file="src/NoaaPower/build.xml" />
+			<fileset file="src/SymIndex/build.xml" />
+			<fileset file="src/WIND/build.xml" />
+			<fileset file="src/GeneralImage/build.xml" />
+		</subant>
+		<delete>
+		  <fileset dir="bin/org/iugonet/www/" includes="**" />
+		</delete>
+	</target>
+	
+	<target name="javadoc" description="Javadoc">
+		<subant target="javadoc">
+			<fileset file="src/ACE/build.xml" />
+			<fileset file="src/DstIndex/build.xml" />
+			<fileset file="src/GOES/build.xml" />
+			<fileset file="src/Iprt/build.xml" />
+			<fileset file="src/MU/build.xml" />
+			<fileset file="src/PoesTxt/build.xml" />
+			<fileset file="src/Wdc/build.xml" />
+			<fileset file="src/AeIndex/build.xml" />
+			<fileset file="src/Eiscat/build.xml" />
+			<fileset file="src/HfTohokuu/build.xml" />
+			<fileset file="src/Lfrto/build.xml" />
+			<fileset file="src/NoaaBi/build.xml" />
+			<fileset file="src/SuperDARN/build.xml" />
+			<fileset file="src/Cira86Ascii/build.xml" />
+			<fileset file="src/FmagNipr/build.xml" />
+			<fileset file="src/ImagNipr/build.xml" />
+			<fileset file="src/Mm210/build.xml" />
+			<fileset file="src/NoaaPower/build.xml" />
+			<fileset file="src/SymIndex/build.xml" />
+			<fileset file="src/WIND/build.xml" />
+			<fileset file="src/GeneralImage/build.xml" />
+		</subant>
+	</target>
+	
+	<target name="test" description="Test">
+		<subant target="test">
+			<fileset file="src/ACE/build.xml" />
+			<fileset file="src/DstIndex/build.xml" />
+			<fileset file="src/GOES/build.xml" />
+			<fileset file="src/Iprt/build.xml" />
+			<fileset file="src/MU/build.xml" />
+			<fileset file="src/PoesTxt/build.xml" />
+			<fileset file="src/Wdc/build.xml" />
+			<fileset file="src/AeIndex/build.xml" />
+			<fileset file="src/Eiscat/build.xml" />
+			<fileset file="src/HfTohokuu/build.xml" />
+			<fileset file="src/Lfrto/build.xml" />
+			<fileset file="src/NoaaBi/build.xml" />
+			<fileset file="src/SuperDARN/build.xml" />
+			<fileset file="src/Cira86Ascii/build.xml" />
+			<fileset file="src/FmagNipr/build.xml" />
+			<fileset file="src/ImagNipr/build.xml" />
+			<fileset file="src/Mm210/build.xml" />
+			<fileset file="src/NoaaPower/build.xml" />
+			<fileset file="src/SymIndex/build.xml" />
+			<fileset file="src/WIND/build.xml" />
+			<fileset file="src/GeneralImage/build.xml" />
+		</subant>
+	</target>
+	
+</project>

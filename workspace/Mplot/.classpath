@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="src/|test/src/" kind="src" path=""/>
+	<classpathentry kind="src" path="test/src"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/Aplot.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-api-10.4.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-coverage-10.4.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-data-10.4.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-main-10.4.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-metadata-10.4.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-opengis-10.4.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-referencing-10.4.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-render-10.4.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-shapefile-10.4.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-swing-10.4.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/Mplot.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
