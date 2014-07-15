@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<project name="Judas" default="all" basedir=".">
+<project name="JudasFX" default="all" basedir=".">
   <taskdef resource="net/sf/antcontrib/antlib.xml">
     <classpath>
       <pathelement location="/usr/share/java/ant/ant-contrib.jar" />
@@ -27,7 +27,7 @@
       <fileset file="workspace/XYplot/build.xml" />
       <fileset file="workspace/JnlpGenerator/build.xml" />
       <fileset file="workspace/Plugins/build.xml" />
-      <fileset file="workspace/Judas/build.xml" />
+      <fileset file="workspace/JudasFX/build.xml" />
     </subant>
     -->
     <if>
@@ -59,13 +59,13 @@
       <fileset file="workspace/XYplot/build.xml" />
       <fileset file="workspace/JnlpGenerator/build.xml" />
       <fileset file="workspace/Plugins/build.xml" />
-      <fileset file="workspace/Judas/build.xml" />
+      <fileset file="workspace/JudasFX/build.xml" />
     </subant>
   </target>
 
   <target name="init" description="Initialize">
     <antcall target="mkdir.tmp" />
-    <mkdir dir="${env.HOME}/Judas/lib/external" />
+    <mkdir dir="${env.HOME}/JudasFX/lib/external" />
     <antcall target="initial_message" />
   </target>
 
@@ -85,17 +85,17 @@
     <echo message="&#x0A;###&#x0A;###&#x0A;&#x0A;Please type&#x0A;&#x0A;~/eclipse.sh&#x0A;&#x0A;###&#x0A;###&#x0A;" />
     <!-- -->
     <echo message="#!/bin/env bash&#x0A;" file="${env.HOME}/eclipse.sh" />
-    <echo message="${env.HOME}/Documents/eclipse/eclipse -data ${env.HOME}/Judas/workspace" file="${env.HOME}/eclipse.sh" append="yes" />
+    <echo message="${env.HOME}/Documents/eclipse/eclipse -data ${env.HOME}/JudasFX/workspace" file="${env.HOME}/eclipse.sh" append="yes" />
     <chmod file="${env.HOME}/eclipse.sh" perm="+x" />
   </target>
 
   <target name="key" description="Create Security Key">
     <mkdir dir="key" />
     <exec executable="keytool">
-      <arg line="-genkey -alias iugonet -keystore ${env.HOME}/Judas/key/keystore -storepass password -keypass password -dname &quot;CN=localhost, OU=IUGONET Project, O=IUGONET project, L=Sakyo-ku, ST=Kyoto, C=JP&quot; -validity 730" />
+      <arg line="-genkey -alias iugonet -keystore ${env.HOME}/JudasFX/key/keystore -storepass password -keypass password -dname &quot;CN=localhost, OU=IUGONET Project, O=IUGONET project, L=Sakyo-ku, ST=Kyoto, C=JP&quot; -validity 730" />
     </exec>
     <exec executable="keytool">
-      <arg line="-list -v -keystore ${env.HOME}/Judas/key/keystore -storepass password" />
+      <arg line="-list -v -keystore ${env.HOME}/JudasFX/key/keystore -storepass password" />
     </exec>
   </target>
 
@@ -305,7 +305,7 @@
       <sourcepath path="workspace/Aplot/src" />
       <sourcepath path="workspace/Iplot/src" />
       <sourcepath path="workspace/JnlpGenerator/src" />
-      <sourcepath path="workspace/Judas/src" />
+      <sourcepath path="workspace/JudasFX/src" />
       <sourcepath path="workspace/MetadataHandler/src" />
       <sourcepath path="workspace/Mplot/src" />
       <sourcepath path="workspace/Plugins/src" />
