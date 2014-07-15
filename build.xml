@@ -200,21 +200,29 @@
     </exec>
     -->
     <!-- -->
+    <!--
     <get src="${src_hdf-java_linux}" dest="${dst_hdf-java_linux}" usetimestamp="yes" />
     <exec executable="tar">
-      <arg line="xvzf ${dst_hdf-java_linux} --directory=${tmp}" />
+      <arg line="xvzf ${dst_hdf-java_linux} - -directory=${tmp}" />
     </exec>
+    -->
     <!-- -->
+    <!--
     <get src="${src_hdf-java_macosx}" dest="${dst_hdf-java_macosx}" usetimestamp="yes" />
     <exec executable="tar">
-      <arg line="xvzf ${dst_hdf-java_macosx} --directory=${tmp}" />
+      <arg line="xvzf ${dst_hdf-java_macosx} - -directory=${tmp}" />
     </exec>
+    -->
     <!-- -->
+    <!--
     <get src="${src_hdf-java_win32}" dest="${dst_hdf-java_win32}" usetimestamp="yes" />
     <unzip src="${dst_hdf-java_win32}" dest="${tmp}" />
+    -->
     <!-- -->
+    <!--
     <get src="${src_hdf-java_win64}" dest="${dst_hdf-java_win64}" usetimestamp="yes" />
     <unzip src="${dst_hdf-java_win64}" dest="${tmp}" />
+    -->
     <!-- -->
     <get src="${src_jython}" dest="${dst_jython}" usetimestamp="yes" />
     <exec executable="java">
