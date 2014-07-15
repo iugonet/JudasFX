@@ -15,7 +15,7 @@
 
   <!-- -->
 
-  <target name="all" depends="clean, init, eclipse, key, maven, lib, switch_jdk, final_message" description="Install all" />
+  <target name="all" depends="clean, init, key, maven, lib, switch_jdk, final_message" description="Install all" />
 
   <target name="clean" description="Clean up">
     <!--
@@ -101,7 +101,7 @@
 
   <target name="lib" description="Install some jar files as external library">
     <get src="${src_jfreechart}" dest="${dst_jfreechart}" usetimestamp="yes" />
-    <untar src="${dst_jfreechart}" dest="${tmp}" compression="gzip" />
+    <unzip src="${dst_jfreechart}" dest="${tmp}" />
     <copy file="${tmp}/${jfreechart_prefix}/lib/${jfreechart_prefix}.jar" todir="${judas.HOME}/lib/external" />
     <copy file="${tmp}/${jfreechart_prefix}/lib/${jcommon_prefix}.jar" todir="${judas.HOME}/lib/external" />
     <!-- -->
