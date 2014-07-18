@@ -65,7 +65,7 @@
 
   <target name="init" description="Initialize">
     <antcall target="mkdir.tmp" />
-    <mkdir dir="${env.HOME}/JudasFX/lib/external" />
+    <mkdir dir="${judasfx.HOME}/lib/external" />
     <antcall target="initial_message" />
   </target>
 
@@ -85,17 +85,17 @@
     <echo message="&#x0A;###&#x0A;###&#x0A;&#x0A;Please type&#x0A;&#x0A;~/eclipse.sh&#x0A;&#x0A;###&#x0A;###&#x0A;" />
     <!-- -->
     <echo message="#!/bin/env bash&#x0A;" file="${env.HOME}/eclipse.sh" />
-    <echo message="${env.HOME}/Documents/eclipse/eclipse -data ${env.HOME}/JudasFX/workspace" file="${env.HOME}/eclipse.sh" append="yes" />
+    <echo message="${env.HOME}/Documents/eclipse/eclipse -data ${judasfx.HOME}/workspace" file="${env.HOME}/eclipse.sh" append="yes" />
     <chmod file="${env.HOME}/eclipse.sh" perm="+x" />
   </target>
 
   <target name="key" description="Create Security Key">
     <mkdir dir="key" />
     <exec executable="keytool">
-      <arg line="-genkey -alias iugonet -keystore ${env.HOME}/JudasFX/key/keystore -storepass password -keypass password -dname &quot;CN=localhost, OU=IUGONET Project, O=IUGONET project, L=Sakyo-ku, ST=Kyoto, C=JP&quot; -validity 730" />
+      <arg line="-genkey -alias iugonet -keystore ${judasfx.HOME}/key/keystore -storepass password -keypass password -dname &quot;CN=localhost, OU=IUGONET Project, O=IUGONET project, L=Sakyo-ku, ST=Kyoto, C=JP&quot; -validity 730" />
     </exec>
     <exec executable="keytool">
-      <arg line="-list -v -keystore ${env.HOME}/JudasFX/key/keystore -storepass password" />
+      <arg line="-list -v -keystore ${judasfx.HOME}/key/keystore -storepass password" />
     </exec>
   </target>
 
@@ -134,24 +134,9 @@
     <unzip src="${dst_jdom}" dest="${tmp}" />
     <copy file="${tmp}/${jdom_prefix}.jar" todir="${judas.HOME}/lib/external" />
     <!-- -->
-    <get src="${src_festSwing}" dest="${dst_festSwing}" usetimestamp="yes" />
-    <unzip src="${dst_festSwing}" dest="${tmp}" />
-    <copy file="${tmp}/${festSwing_prefix}/${festSwing_prefix}.jar" todir="${judas.HOME}/lib/external" />
-    <copy file="${tmp}/${festSwing_prefix}/lib/fest-reflect-1.2.jar" todir="${judas.HOME}/lib/external" />
-    <copy file="${tmp}/${festSwing_prefix}/lib/fest-assert-1.2.jar" todir="${judas.HOME}/lib/external" />
-    <copy file="${tmp}/${festSwing_prefix}/lib/fest-util-1.1.2.jar" todir="${judas.HOME}/lib/external" />
-    <!-- -->
     <get src="${src_jyconsole}" dest="${dst_jyconsole}" usetimestamp="yes" />
     <unzip src="${dst_jyconsole}" dest="${tmp}" />
     <copy file="${tmp}/${jyconsole_prefix}/JyConsole.jar" todir="${judas.HOME}/lib/external" />
-    <!-- -->
-    <!--
-    <get src="${src_swingx}" dest="${dst_swingx}" usetimestamp="yes" />
-    -->
-    <exec executable="curl" dir="${tmp}">
-      <arg line="-O ${src_swingx}" />
-    </exec>
-    <copy file="${tmp}/${swingx}" todir="${judas.HOME}/lib/external" />
     <!-- -->
     <get src="${src_java_getopt}" dest="${dst_java_getopt}" usetimestamp="yes" />
     <copy file="${tmp}/${java_getopt}" todir="${judas.HOME}/lib/external" />
@@ -165,9 +150,6 @@
     <!-- -->
     <get src="${src_cdfjava}" dest="${dst_cdfjava}" usetimestamp="yes" />
     <copy file="${tmp}/${cdfjava}" todir="${judas.HOME}/lib/external" />
-    <!-- -->
-    <get src="${src_swexpl-eclipse}" dest="${dst_swexpl-eclipse}" usetimestamp="yes" />
-    <unzip src="${dst_swexpl-eclipse}" dest="${env.HOME}/Documents/eclipse" />
     <!-- -->
     <get src="${src_junit}" dest="${dst_junit}" usetimestamp="yes" />
     <copy file="${tmp}/${junit.jar}" todir="${judas.HOME}/lib/external" />
