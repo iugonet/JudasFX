@@ -1,0 +1,1673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iugonet.www.LoadDataController">
+   <children>
+      <SplitPane dividerPositions="0.939799331103679" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TabPane prefHeight="510.0" prefWidth="798.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="THEMIS">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane prefHeight="477.0" prefWidth="798.0">
+                                       <children>
+                                          <Label text="Data Selection:">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Data Loaded:" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-1-right16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </Button>
+                                                <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" top="150.0" />
+                                             </GridPane.margin>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" text="Delete All Data" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/folder16.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <tooltip>
+                                                <Tooltip text="Empty Tooltip" />
+                                             </tooltip>
+                                          </Button>
+                                          <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0" GridPane.rowIndex="1">
+                                             <children>
+                                                <Label text="Start Time:" />
+                                                <Label text="Stop Time:" GridPane.rowIndex="1" />
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <TextField GridPane.columnIndex="1" />
+                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                   </children>
+                                                </HBox>
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Use Single Day" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="87.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="305.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                          <Label text="Label" GridPane.rowIndex="1" />
+                                          <ComboBox prefWidth="150.0" GridPane.rowIndex="1" />
+                                          <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                          <GridPane GridPane.rowIndex="1">
+                                             <children>
+                                                <Button mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <ListView prefHeight="197.0" prefWidth="131.0" GridPane.rowIndex="1" />
+                                                <Label text="Level 1:" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="All-Sky Ground Station:">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button layoutX="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Clear" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Label layoutX="141.0" layoutY="35.0" text="Level 2:" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <ListView layoutX="10.0" layoutY="74.0" prefHeight="197.0" prefWidth="131.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                <Button mnemonicParsing="false" text="Check data availability" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <tooltip>
+                                                      <Tooltip text="Check data availability" />
+                                                   </tooltip>
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/done16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="300.0" minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="147.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="443.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="398.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                 </children></AnchorPane>
+                        </content>
+                           <tooltip>
+                              <Tooltip text="THEMIS" />
+                           </tooltip>
+                      </Tab>
+                      <Tab text="THEMIS Derived Spectra">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.9010526315789473" layoutX="98.0" layoutY="108.0" orientation="VERTICAL" prefHeight="477.0" prefWidth="798.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                             <children>
+                                                <GridPane layoutX="67.0" layoutY="86.0" prefHeight="424.0" prefWidth="796.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints maxHeight="380.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="361.0" minHeight="10.0" prefHeight="361.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Data Selection:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font></Label>
+                                                      <Label text="Variable Name:" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font></Label>
+                                                      <GridPane>
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints maxHeight="337.0" minHeight="10.0" prefHeight="337.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                      </GridPane>
+                                                      <GridPane GridPane.columnIndex="1">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints maxHeight="157.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints maxHeight="169.0" minHeight="10.0" prefHeight="169.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label text="Energy Range:">
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font></Label>
+                                                            <Label text="Angular distribution:" GridPane.rowIndex="2">
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </GridPane>
+                                                      <GridPane GridPane.columnIndex="2">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints maxHeight="179.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints maxHeight="349.0" minHeight="10.0" prefHeight="349.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label text="Advanced:">
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                             <children>
+                                                <HBox layoutX="80.0" layoutY="5.0" spacing="10.0">
+                                                   <children>
+                                                      <Button layoutX="70.0" layoutY="5.0" mnemonicParsing="false" text="Apply">
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/trash-empty16.png" />
+                                                               </image></ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font></Button>
+                                                      <Button layoutX="162.0" layoutY="17.0" mnemonicParsing="false" text="Reset All">
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/trash-empty16.png" />
+                                                               </image></ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font></Button>
+                                                      <Button layoutX="300.0" layoutY="17.0" mnemonicParsing="false" text="Help">
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/trash-empty16.png" />
+                                                               </image></ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font></Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                           <tooltip>
+                              <Tooltip text="THEMIS Derived Spectra" />
+                           </tooltip>
+                      </Tab>
+                      <Tab text="GOES">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane layoutX="58.0" layoutY="105.0" prefHeight="477.0" prefWidth="798.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="147.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="443.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="398.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="GOES Data Selection:">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                          <Label text="Data Loaded:" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                          <VBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-1-right16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></Button>
+                                                <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></Button>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" top="150.0" />
+                                             </GridPane.margin>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" text="Delete All Data" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/folder16.png" />
+                                                   </image></ImageView>
+                                             </graphic>
+                                             <tooltip>
+                                                <Tooltip text="Empty Tooltip" />
+                                             </tooltip>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Button>
+                                          <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0" GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="87.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="305.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Start Time:" />
+                                                <Label text="Stop Time:" GridPane.rowIndex="1" />
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <TextField GridPane.columnIndex="1" />
+                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                   </children>
+                                                </HBox>
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Use Single Day" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                          <Label text="Label" GridPane.rowIndex="1" />
+                                          <ComboBox prefWidth="150.0" GridPane.rowIndex="1" />
+                                          <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                          <GridPane GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="300.0" minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Button>
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <ListView prefHeight="197.0" prefWidth="131.0" GridPane.rowIndex="1" />
+                                                <Label text="Parameter Type:" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Label>
+                                                <Label text="Data Type:">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Label>
+                                                <Button layoutX="100.0" mnemonicParsing="false" text="Clear" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Button>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </GridPane>
+                                 </children></AnchorPane>
+                           </content>
+                           <tooltip>
+                              <Tooltip text="GOES" />
+                           </tooltip>
+                        </Tab>
+                        <Tab text="WIND">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane layoutX="58.0" layoutY="105.0" prefHeight="477.0" prefWidth="798.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints maxHeight="59.0" minHeight="39.0" prefHeight="59.0" />
+                                        <RowConstraints maxHeight="59.0" minHeight="39.0" prefHeight="59.0" />
+                                        <RowConstraints maxHeight="391.0" minHeight="6.0" prefHeight="346.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <AnchorPane maxHeight="600.0" maxWidth="800.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <children>
+                                                <VBox spacing="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="150.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/arrow-1-right16.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/trash-empty16.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                      </Button>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                          <Label text="IUGONET Data Selection:" GridPane.rowIndex="2" />
+                                          <Label text="Data Loaded:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                          <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0" GridPane.rowIndex="2">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="87.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="305.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Start Time:" />
+                                                <Label text="Stop Time:" GridPane.rowIndex="1" />
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <TextField GridPane.columnIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip></TextField>
+                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1">
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip></Button>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip></TextField>
+                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip></Button>
+                                                   </children>
+                                                </HBox>
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Use Single Day" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                          <Label text="Label" GridPane.rowIndex="2" />
+                                          <ComboBox prefWidth="150.0" GridPane.rowIndex="2">
+                                             <tooltip>
+                                                <Tooltip text="Empty Tooltip" />
+                                             </tooltip></ComboBox>
+                                          <GridPane GridPane.rowIndex="2">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button maxWidth="300.0" mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/activity16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin></Button>
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></ListView>
+                                                <ListView prefHeight="197.0" prefWidth="131.0" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></ListView>
+                                                <Label text="Parameter(s):" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Label>
+                                                <Label text="Data Type:" />
+                                                <ComboBox prefWidth="150.0">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></ComboBox>
+                                                <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></CheckBox>
+                                             </children>
+                                          </GridPane>
+                                          <Label text="Instrument Type:" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                          <GridPane GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="351.0" minHeight="10.0" prefHeight="338.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button mnemonicParsing="false" text="Delete All Data" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Button>
+                                                <ListView prefHeight="200.0" prefWidth="200.0">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </ListView>
+                                             </children>
+                                          </GridPane>
+                                          <Label text="WIND Data Selection:" />
+                                       </children>
+                                    </GridPane>
+                                 </children></AnchorPane>
+                           </content>
+                           <tooltip>
+                              <Tooltip text="WIND" />
+                           </tooltip>
+                        </Tab>
+                        <Tab text="ACE">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane layoutX="58.0" layoutY="105.0" prefHeight="477.0" prefWidth="798.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="147.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="443.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="398.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="ACE Data Selection:">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                          <Label text="Data Loaded:" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                          <VBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-1-right16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin></Button>
+                                                <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></Button>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" top="150.0" />
+                                             </GridPane.margin>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" text="Delete All Data" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/trash-empty16.png" />
+                                                   </image></ImageView>
+                                             </graphic>
+                                             <tooltip>
+                                                <Tooltip text="Empty Tooltip" />
+                                             </tooltip>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Button>
+                                          <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0" GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="87.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="305.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Start Time:" />
+                                                <Label text="Stop Time:" GridPane.rowIndex="1" />
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <TextField GridPane.columnIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip></TextField>
+                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip></Button>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip></TextField>
+                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip></Button>
+                                                   </children>
+                                                </HBox>
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Use Single Day" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                          <Label text="Label" GridPane.rowIndex="1" />
+                                          <ComboBox prefWidth="150.0" GridPane.rowIndex="1">
+                                             <tooltip>
+                                                <Tooltip text="Empty Tooltip" />
+                                             </tooltip></ComboBox>
+                                          <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <tooltip>
+                                                <Tooltip text="Empty Tooltip" />
+                                             </tooltip></ListView>
+                                          <GridPane GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/keyboard16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Button>
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></ListView>
+                                                <ListView prefHeight="197.0" prefWidth="131.0" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></ListView>
+                                                <Label text="Parameter(s):" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Label>
+                                                <Label text="Data Type:" />
+                                                <Label text="Instrument Type:" />
+                                                <ComboBox prefWidth="150.0">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></ComboBox>
+                                                <CheckBox mnemonicParsing="false" text="Use Single Day">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></CheckBox>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </GridPane>
+                                 </children></AnchorPane>
+                           </content>
+                           <tooltip>
+                              <Tooltip text="ACE" />
+                           </tooltip>
+                        </Tab>
+                        <Tab text="FAST">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane prefHeight="477.0" prefWidth="798.0">
+                                       <children>
+                                          <Label text="FAST Data Selection:">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Data Loaded:" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-1-right16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </Button>
+                                                <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" top="150.0" />
+                                             </GridPane.margin>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" text="Delete All Data" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/trash-empty16.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <tooltip>
+                                                <Tooltip text="Empty Tooltip" />
+                                             </tooltip>
+                                          </Button>
+                                          <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0" GridPane.rowIndex="1">
+                                             <children>
+                                                <Label text="Start Time:" />
+                                                <Label text="Stop Time:" GridPane.rowIndex="1" />
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <TextField GridPane.columnIndex="1" />
+                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                   </children>
+                                                </HBox>
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Use Single Day" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="87.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="305.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                          <Label text="Label" GridPane.rowIndex="1" />
+                                          <ComboBox prefWidth="150.0" GridPane.rowIndex="1">
+                                             <tooltip>
+                                                <Tooltip text="Empty Tooltip" />
+                                             </tooltip>
+                                          </ComboBox>
+                                          <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <tooltip>
+                                                <Tooltip text="Empty Tooltip" />
+                                             </tooltip>
+                                          </ListView>
+                                          <GridPane GridPane.rowIndex="1">
+                                             <children>
+                                                <Button mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/settings16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </Button>
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </ListView>
+                                                <ListView prefHeight="197.0" prefWidth="131.0" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </ListView>
+                                                <Label text="Data Type:" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Resolution:">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" text="Clear" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/settings16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="147.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="443.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="398.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <tooltip>
+                              <Tooltip text="FAST" />
+                           </tooltip>
+                        </Tab>
+                        <Tab text="IUGONET">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane layoutX="58.0" layoutY="105.0" prefHeight="477.0" prefWidth="798.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="147.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="443.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="398.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="IUGONET Data Selection:">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                          <Label text="Data Loaded:" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                          <VBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-1-right16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></Button>
+                                                <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></Button>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" top="150.0" />
+                                             </GridPane.margin>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" text="Delete All Data" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/trash-empty16.png" />
+                                                   </image></ImageView>
+                                             </graphic>
+                                             <tooltip>
+                                                <Tooltip text="Empty Tooltip" />
+                                             </tooltip>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Button>
+                                          <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0" GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="87.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="305.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Start Time:" />
+                                                <Label text="Stop Time:" GridPane.rowIndex="1" />
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <TextField GridPane.columnIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip></TextField>
+                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip></Button>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip></TextField>
+                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip></Button>
+                                                   </children>
+                                                </HBox>
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Use Single Day" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                          <Label text="Label" GridPane.rowIndex="1" />
+                                          <ComboBox prefWidth="150.0" GridPane.rowIndex="1">
+                                             <tooltip>
+                                                <Tooltip text="Empty Tooltip" />
+                                             </tooltip></ComboBox>
+                                          <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <tooltip>
+                                                <Tooltip text="Empty Tooltip" />
+                                             </tooltip></ListView>
+                                          <GridPane GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/copy16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Button>
+                                                <Button mnemonicParsing="false" text="Clear" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/calendar-alt-1-16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Button>
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></ListView>
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></ListView>
+                                                <ListView prefHeight="197.0" prefWidth="131.0" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></ListView>
+                                                <Label text="Paraeter(s) #2" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Label>
+                                                <Label text="Site or Parameter(s) #1" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Label>
+                                                <Label text="Data Type:">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Label>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </GridPane>
+                                 </children></AnchorPane>
+                           </content>
+                           <tooltip>
+                              <Tooltip text="IUGONET" />
+                           </tooltip>
+                        </Tab>
+                       <Tab text="OMNI">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane layoutX="58.0" layoutY="105.0" prefHeight="477.0" prefWidth="798.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="147.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="443.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="398.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="OMNI Data Selection:">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                          <Label text="Data Loaded:" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                          <VBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-1-right16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></Button>
+                                                <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></Button>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" top="150.0" />
+                                             </GridPane.margin>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" text="Delete All Data" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/trash-empty16.png" />
+                                                   </image></ImageView>
+                                             </graphic>
+                                             <tooltip>
+                                                <Tooltip text="Empty Tooltip" />
+                                             </tooltip>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Button>
+                                          <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0" GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="87.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="305.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Start Time:" />
+                                                <Label text="Stop Time:" GridPane.rowIndex="1" />
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <TextField GridPane.columnIndex="1" />
+                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                   </children>
+                                                </HBox>
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Use Single Day" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                          <Label text="Label" GridPane.rowIndex="1" />
+                                          <ComboBox prefWidth="150.0" GridPane.rowIndex="1">
+                                             <tooltip>
+                                                <Tooltip text="Empty Tooltip" />
+                                             </tooltip></ComboBox>
+                                          <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <tooltip>
+                                                <Tooltip text="Empty Tooltip" />
+                                             </tooltip></ListView>
+                                          <GridPane GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/settings16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Button>
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></ListView>
+                                                <ListView prefHeight="197.0" prefWidth="131.0" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip></ListView>
+                                                <Label text="Data Type:" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Label>
+                                                <Label text="Resolution:">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Label>
+                                                <Button mnemonicParsing="false" text="Clear" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/settings16.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Button>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </GridPane>
+                                 </children></AnchorPane>
+                           </content>
+                           <tooltip>
+                              <Tooltip text="OMNI" />
+                           </tooltip>
+                        </Tab>
+                        <Tab text="Geomagnetic/Solar Indices">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane prefHeight="525.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <GridPane GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="214.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="328.0" minHeight="10.0" prefHeight="328.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0">
+                                                   <children>
+                                                      <Label text="Start Time:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label disable="true" text="Stop Time:" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
+                                                         <children>
+                                                            <TextField GridPane.columnIndex="1" />
+                                                            <Button mnemonicParsing="false" GridPane.columnIndex="1">
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@icons/calendar-alt-1-16.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <children>
+                                                            <TextField disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <Button disable="true" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@icons/calendar-alt-1-16.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                         </children>
+                                                      </HBox>
+                                                      <CheckBox mnemonicParsing="false" selected="true" text="Use Single Day" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </CheckBox>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="87.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="305.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/settings16.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                      </Button>
+                                                      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                      </ListView>
+                                                      <ListView prefHeight="197.0" prefWidth="131.0" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                      </ListView>
+                                                      <Label text="Data Type:" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Index:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Clear" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/settings16.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                      </Button>
+                                                      <ListView layoutX="141.0" layoutY="120.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                      </ListView>
+                                                      <Label text="Resolution:l" GridPane.columnIndex="2" />
+                                                      <Button layoutX="141.0" layoutY="305.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Clear" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/settings16.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                      </Button>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints maxHeight="104.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="239.0" minHeight="10.0" prefHeight="239.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                             </children>
+                                          </GridPane>
+                                          <Label text="Geomagnetic &amp; Solar Indices Data:">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Data Loaded:" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-1-right16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </Button>
+                                                <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" top="150.0" />
+                                             </GridPane.margin>
+                                          </VBox>
+                                          <Label text="Ap data is provided by the NOAA National Geophysical Data enter" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="435.0" minHeight="10.0" prefHeight="402.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="210.0" minHeight="8.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <ListView prefHeight="200.0" prefWidth="200.0">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </ListView>
+                                                <Button mnemonicParsing="false" text="Delete All Data" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="147.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="443.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="398.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <tooltip>
+                              <Tooltip text="Geomagnetic/Solar Indices" />
+                           </tooltip>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button fx:id="btnDone" mnemonicParsing="false" onAction="#handleDone" text="Done" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/done16.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Empty Tooltip" />
+                     </tooltip>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

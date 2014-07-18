@@ -4,12 +4,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.net.URL;
 
-import org.iugonet.www.Tplot;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.data.time.Minute;
-import org.jfree.data.time.TimeSeriesCollection;
+import javafx.scene.chart.XYChart.Series;
+import lombok.Data;
 
+import org.iugonet.www.Tplot;
+
+@Data
 public class Wdc extends Tplot {
 
 	private BufferedReader bufferedReader;
@@ -82,21 +82,12 @@ public class Wdc extends Tplot {
 	}
 
 	@Override
-	public TimeSeriesCollection load(URL url) {
+	public Series load(URL url) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 	
-	@Override
-	public ChartPanel getChartPanel() {
-		// TODO Auto-generated method stub
-		return null;
+	public void plot() {
+		
 	}
-
-	@Override
-	public JFreeChart getChart() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

@@ -5,17 +5,17 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/Aplot.jar"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-api-10.4.jar"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-coverage-10.4.jar"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-data-10.4.jar"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-main-10.4.jar"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-metadata-10.4.jar"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-opengis-10.4.jar"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-referencing-10.4.jar"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-render-10.4.jar"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-shapefile-10.4.jar"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/gt-swing-10.4.jar"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/Mplot.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-api-11.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-coverage-11.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-data-11.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-main-11.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-metadata-11.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-opengis-11.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-referencing-11.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-render-11.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-shapefile-11.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/Aplot.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/lombok.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

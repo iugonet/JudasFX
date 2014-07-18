@@ -1,11 +1,12 @@
 package org.iugonet.www;
 
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
 import java.net.URI;
 import java.beans.*;
 import java.io.*;
 
 import org.iugonet.www.MuIsdataPowerTxt;
-import org.jfree.data.time.TimeSeries;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

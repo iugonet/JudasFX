@@ -2,10 +2,11 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test/src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/Aplot.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/jcommon-1.0.21.jar"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/jfreechart-1.0.17.jar"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/Aplot.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/lombok.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/Tplot.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

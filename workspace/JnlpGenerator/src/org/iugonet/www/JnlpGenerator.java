@@ -4,6 +4,7 @@ import gnu.getopt.Getopt;
 
 
 
+
 import java.awt.EventQueue;
 import java.io.File;
 import java.io.FileInputStream;
@@ -25,10 +26,13 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import lombok.Data;
+
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+@Data
 public class JnlpGenerator {
 
 	private Element root;
@@ -40,8 +44,6 @@ public class JnlpGenerator {
 	private String iconKind;
 	private String vendor;
 	private String description;
-	private String jfreechart;
-	private String jcommon;
 	private String java_getopt;
 	private String judasviewer;
 	private String tplot;
@@ -89,8 +91,6 @@ public class JnlpGenerator {
 			judasviewer = properties.getProperty("JUDASVIEWER");
 			tplot = properties.getProperty("TPLOT");
 			dataloader = properties.getProperty("DATALOADER");
-			jfreechart = properties.getProperty("JFREECHART");
-			jcommon = properties.getProperty("JCOMMON");
 			java_getopt = properties.getProperty("JAVAGETOPT");
 			j2seVersion = properties.getProperty("J2SE_VERSION");
 		} catch (Exception e) {
@@ -200,7 +200,7 @@ public class JnlpGenerator {
 			DOMImplementation domImpl = builder.getDOMImplementation();
 			Document document = domImpl.createDocument("", "jnlp", null);
 			Element root = document.getDocumentElement();
-			root.setAttribute("spec", "7.0+");
+			root.setAttribute("spec", "8.0+");
 			root.setAttribute("codebase", codebase);
 			root.setAttribute("href", "jnlp/" + prefix + ".jnlp");
 			// information
@@ -244,7 +244,7 @@ public class JnlpGenerator {
 			j2se.setAttribute("version", j2seVersion);
 			resources.appendChild(j2se);
 
-			Element[] jar = new Element[6];
+			Element[] jar = new Element[4];
 			jar[0] = document.createElement("jar");
 			jar[0].setAttribute("href", judasviewer);
 
@@ -253,15 +253,9 @@ public class JnlpGenerator {
 
 			jar[2] = document.createElement("jar");
 			jar[2].setAttribute("href", dataloader);
-
-			jar[3] = document.createElement("jar");
-			jar[3].setAttribute("href", jfreechart);
-
-			jar[4] = document.createElement("jar");
-			jar[4].setAttribute("href", jcommon);
 			
-			jar[5] = document.createElement("jar");
-			jar[5].setAttribute("href", java_getopt);
+			jar[3] = document.createElement("jar");
+			jar[3].setAttribute("href", java_getopt);
 
 			for (int i = 0; i < jar.length; i++) {
 				resources.appendChild(jar[i]);

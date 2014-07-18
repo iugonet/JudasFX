@@ -16,6 +16,15 @@
   <!-- -->
 
   <target name="all" depends="clean, init, key, maven, lib, switch_jdk, final_message" description="Install all" />
+  
+  <target name="cleanAll" depends="clean">
+    <if>
+      <available file="${tmp}" type="dir" />
+      <then>
+        <delete dir="${tmp}" />
+      </then>
+    </if>
+  </target>
 
   <target name="clean" description="Clean up">
     <!--
@@ -33,7 +42,7 @@
     <if>
       <available file="${plugins.dir}" type="dir" />
       <then>
-        <delete file="${plugins.dir}" />
+        <delete dir="${plugins.dir}" />
       </then>
     </if>
     <if>
@@ -65,7 +74,7 @@
 
   <target name="init" description="Initialize">
     <antcall target="mkdir.tmp" />
-    <mkdir dir="${judasfx.HOME}/lib/external" />
+    <mkdir dir="${ext.dir}" />
     <antcall target="initial_message" />
   </target>
 
@@ -100,65 +109,119 @@
   </target>
 
   <target name="lib" description="Install some jar files as external library">
-    <get src="${src_jfreechart}" dest="${dst_jfreechart}" usetimestamp="yes" />
-    <unzip src="${dst_jfreechart}" dest="${tmp}" />
-    <copy file="${tmp}/${jfreechart_prefix}/lib/${jfreechart_prefix}.jar" todir="${judas.HOME}/lib/external" />
-    <copy file="${tmp}/${jfreechart_prefix}/lib/${jcommon_prefix}.jar" todir="${judas.HOME}/lib/external" />
+    <antcall target="mkdir.tmp" />
+    <antcall target="maven" />
+
     <!-- -->
     <get src="${src_geotools}" dest="${dst_geotools}" usetimestamp="yes" />
     <unzip src="${dst_geotools}" dest="${tmp}" />
-    <copy file="${tmp}/${geotools_prefix}/${gt_api.jar}" todir="${judas.HOME}/lib/external" />
-    <copy file="${tmp}/${geotools_prefix}/${gt_main.jar}" todir="${judas.HOME}/lib/external" />
-    <copy file="${tmp}/${geotools_prefix}/${gt_swing.jar}" todir="${judas.HOME}/lib/external" />
-    <copy file="${tmp}/${geotools_prefix}/${gt_data.jar}" todir="${judas.HOME}/lib/external" />
-    <copy file="${tmp}/${geotools_prefix}/${gt_coverage.jar}" todir="${judas.HOME}/lib/external" />
-    <copy file="${tmp}/${geotools_prefix}/${gt_referencing.jar}" todir="${judas.HOME}/lib/external" />
-    <copy file="${tmp}/${geotools_prefix}/${gt_shapefile.jar}" todir="${judas.HOME}/lib/external" />
-    <copy file="${tmp}/${geotools_prefix}/${gt_render.jar}" todir="${judas.HOME}/lib/external" />
-    <copy file="${tmp}/${geotools_prefix}/${gt_metadata.jar}" todir="${judas.HOME}/lib/external" />
-    <copy file="${tmp}/${geotools_prefix}/${gt_opengis.jar}" todir="${judas.HOME}/lib/external" />
-    <copy file="${tmp}/${geotools_prefix}/${jts.jar}" todir="${judas.HOME}/lib/external" />
-    <!-- -->
-    <get src="${src_jythonconsole}" dest="${dst_jythonconsole}" usetimestamp="yes" />
-    <unzip src="${dst_jythonconsole}" dest="${tmp}" />
+    <copy file="${tmp}/${geotools_prefix}/${gt_api.jar}" todir="${ext.dir}" />
+    <copy file="${tmp}/${geotools_prefix}/${gt_main.jar}" todir="${ext.dir}" />
+    <copy file="${tmp}/${geotools_prefix}/${gt_data.jar}" todir="${ext.dir}" />
+    <copy file="${tmp}/${geotools_prefix}/${gt_coverage.jar}" todir="${ext.dir}" />
+    <copy file="${tmp}/${geotools_prefix}/${gt_referencing.jar}" todir="${ext.dir}" />
+    <copy file="${tmp}/${geotools_prefix}/${gt_shapefile.jar}" todir="${ext.dir}" />
+    <copy file="${tmp}/${geotools_prefix}/${gt_render.jar}" todir="${ext.dir}" />
+    <copy file="${tmp}/${geotools_prefix}/${gt_metadata.jar}" todir="${ext.dir}" />
+    <copy file="${tmp}/${geotools_prefix}/${gt_opengis.jar}" todir="${ext.dir}" />
+    <copy file="${tmp}/${geotools_prefix}/${jts.jar}" todir="${ext.dir}" />
     <!-- -->
     <get src="${src_commons_math}" dest="${dst_commons_math}" usetimestamp="yes" />
     <unzip src="${dst_commons_math}" dest="${tmp}" />
-    <copy file="${tmp}/${commons_math_sub_prefix}/${commons_math_sub_prefix}.jar" todir="${judas.HOME}/lib/external" />
+    <copy file="${tmp}/${commons_math_sub_prefix}/${commons_math_sub_prefix}.jar" todir="${ext.dir}" />
     <!-- -->
     <get src="${src_commons_validator}" dest="${dst_commons_validator}" usetimestamp="yes" />
     <unzip src="${dst_commons_validator}" dest="${tmp}" />
-    <copy file="${tmp}/${commons_validator_sub_prefix}/${commons_validator_sub_prefix}.jar" todir="${judas.HOME}/lib/external" />
+    <copy file="${tmp}/${commons_validator_sub_prefix}/${commons_validator_sub_prefix}.jar" todir="${ext.dir}" />
     <!-- -->
     <get src="${src_jdom}" dest="${dst_jdom}" usetimestamp="yes" />
     <unzip src="${dst_jdom}" dest="${tmp}" />
-    <copy file="${tmp}/${jdom_prefix}.jar" todir="${judas.HOME}/lib/external" />
+    <copy file="${tmp}/${jdom_prefix}.jar" todir="${ext.dir}" />
     <!-- -->
     <get src="${src_jyconsole}" dest="${dst_jyconsole}" usetimestamp="yes" />
     <unzip src="${dst_jyconsole}" dest="${tmp}" />
-    <copy file="${tmp}/${jyconsole_prefix}/JyConsole.jar" todir="${judas.HOME}/lib/external" />
+    <copy file="${tmp}/${jyconsole_prefix}/JyConsole.jar" todir="${ext.dir}" />
+    <copy file="${tmp}/${jyconsole_prefix}/thirdpart/ArtTk/ArtTk.jar" todir="${ext.dir}" />
+    <copy file="${tmp}/${jyconsole_prefix}/thirdpart/jython2.2/jython.jar" todir="${ext.dir}" />
     <!-- -->
     <get src="${src_java_getopt}" dest="${dst_java_getopt}" usetimestamp="yes" />
-    <copy file="${tmp}/${java_getopt}" todir="${judas.HOME}/lib/external" />
+    <copy file="${tmp}/${java_getopt}" todir="${ext.dir}" />
     <!-- -->
-<!--
+    <!--
     <get src="${src_jai}" dest="${dst_jai}" usetimestamp="yes" />
     <unzip src="${dst_jai}" dest="${tmp}" />
-    <copy file="${tmp}/jai-${jai_version}/lib/jai_codec.jar" todir="${judas.HOME}/lib/external" />
-    <copy file="${tmp}/jai-${jai_version}/lib/jai_core.jar" todir="${judas.HOME}/lib/external" />
--->
+    -->
     <!-- -->
     <get src="${src_cdfjava}" dest="${dst_cdfjava}" usetimestamp="yes" />
-    <copy file="${tmp}/${cdfjava}" todir="${judas.HOME}/lib/external" />
+    <copy file="${tmp}/${cdfjava}" todir="${ext.dir}" />
     <!-- -->
     <get src="${src_junit}" dest="${dst_junit}" usetimestamp="yes" />
-    <copy file="${tmp}/${junit.jar}" todir="${judas.HOME}/lib/external" />
+    <copy file="${tmp}/${junit.jar}" todir="${ext.dir}" />
     <!-- -->
     <get src="${src_oai4j}" dest="${dst_oai4j}" usetimestamp="yes" />
-<!--    <copy file="${tmp}/${oai4j.jar}" todir="${judas.HOME}/lib/external" /> -->
+    <!--    <copy file="${tmp}/${oai4j.jar}" todir="${ext.dir}" /> -->
+    <get src="${src_jfxtras-agenda}" dest="${dst_jfxtras-agenda}" usetimestamp="yes" />
+    <copy file="${dst_jfxtras-agenda}" todir="${ext.dir}" />    
+    <get src="${src_jfxtras-common}" dest="${dst_jfxtras-common}" usetimestamp="yes" />
+    <copy file="${dst_jfxtras-common}" todir="${ext.dir}" />    
+    <get src="${src_jfxtras-controls}" dest="${dst_jfxtras-controls}" usetimestamp="yes" />
+    <copy file="${dst_jfxtras-controls}" todir="${ext.dir}" />    
+    <get src="${src_jfxtras-fxml}" dest="${dst_jfxtras-fxml}" usetimestamp="yes" />
+    <copy file="${dst_jfxtras-fxml}" todir="${ext.dir}" />    
+    <get src="${src_jfxtras-labs}" dest="${dst_jfxtras-labs}" usetimestamp="yes" />
+    <copy file="${dst_jfxtras-labs}" todir="${ext.dir}" />    
+    <get src="${src_jfxtras-test-support}" dest="${dst_jfxtras-test-support}" usetimestamp="yes" />
+    <copy file="${dst_jfxtras-test-support}" todir="${ext.dir}" />    
+    <get src="${src_jfxtras-window}" dest="${dst_jfxtras-window}" usetimestamp="yes" />
+    <copy file="${dst_jfxtras-window}" todir="${ext.dir}" />    
     <!-- -->
+    <get src="${src_testFx.jar}" dest="${dst_testFx.jar}" usetimestamp="yes" />
+    <copy file="${dst_testFx.jar}" todir="${ext.dir}" />    
+    <get src="${src_testFx.javadoc.jar}" dest="${dst_testFx.javadoc.jar}" usetimestamp="yes" />
+    <copy file="${dst_testFx.javadoc.jar}" todir="${ext.dir}" />    
+    <get src="${src_testFx.sources.jar}" dest="${dst_testFx.sources.jar}" usetimestamp="yes" />
+    <copy file="${dst_testFx.sources.jar}" todir="${ext.dir}" />    
+    <!-- -->
+    <get src="${src_guava.jar}" dest="${dst_guava.jar}" usetimestamp="yes" />
+    <copy file="${dst_guava.jar}" todir="${ext.dir}" />    
+    <!-- -->
+    <get src="${src_hamcrest.jar}" dest="${dst_hamcrest.jar}" usetimestamp="yes" />
+    <copy file="${dst_hamcrest.jar}" todir="${ext.dir}" />    
+    <!-- -->
+    <get src="${src_undofx.jar}" dest="${dst_undofx.jar}" usetimestamp="yes" />
+    <copy file="${dst_undofx.jar}" todir="${ext.dir}" />    
+    <get src="${src_undofx.javadoc.jar}" dest="${dst_undofx.javadoc.jar}" usetimestamp="yes" />
+    <copy file="${dst_undofx.javadoc.jar}" todir="${ext.dir}" />    
+    <get src="${src_undofx.sources.jar}" dest="${dst_undofx.sources.jar}" usetimestamp="yes" />
+    <copy file="${dst_undofx.sources.jar}" todir="${ext.dir}" />    
+    <!-- -->
+    <get src="${src_lombok.jar}" dest="${dst_lombok.jar}" usetimestamp="yes" />
+    <copy file="${dst_lombok.jar}" todir="${ext.dir}" />
+    <!-- -->
+    <get src="${src_felix}" dest="${dst_felix}" usetimestamp="yes" />
+    <unzip src="${dst_felix}" dest="${tmp}" />
+    <!-- -->
+<!--
+    <copy file="${dst_felix}" dest="${ext.dir}" />
+-->
+    <!-- -->
+    <get src="${src_javacv}" dest="${dst_javacv}" usetimestamp="yes" />
+    <unzip src="${dst_javacv}" dest="${tmp}" />
+    <copy file="${tmp}/javacv-bin/javacv.jar" todir="${ext.dir}" />    
+    <copy file="${tmp}/javacv-bin/javacpp.jar" todir="${ext.dir}" />    
+    <copy file="${tmp}/javacv-bin/opencv.jar" todir="${ext.dir}" />    
+    <copy file="${tmp}/javacv-bin/opencv-linux-x86_64.jar" todir="${ext.dir}" />    
+    <copy file="${tmp}/javacv-bin/opencv-linux-x86.jar" todir="${ext.dir}" />    
+    <copy file="${tmp}/javacv-bin/opencv-macosx-x86_64.jar" todir="${ext.dir}" />    
+    <copy file="${tmp}/javacv-bin/opencv-windows-x86_64.jar" todir="${ext.dir}" />    
+    <copy file="${tmp}/javacv-bin/opencv-windows-x86.jar" todir="${ext.dir}" />    <copy file="${tmp}/javacv-bin/ffmpeg.jar" todir="${ext.dir}" />    
+    <copy file="${tmp}/javacv-bin/ffmpeg-linux-x86_64.jar" todir="${ext.dir}" />    
+    <copy file="${tmp}/javacv-bin/ffmpeg-linux-x86.jar" todir="${ext.dir}" />    
+    <copy file="${tmp}/javacv-bin/ffmpeg-macosx-x86_64.jar" todir="${ext.dir}" />    
+    <copy file="${tmp}/javacv-bin/ffmpeg-windows-x86_64.jar" todir="${ext.dir}" />    
+    <copy file="${tmp}/javacv-bin/ffmpeg-windows-x86.jar" todir="${ext.dir}" />    <!-- -->
     <get src="${src_fits}" dest="${dst_fits}" usetimestamp="yes" />
-    <copy file="${dst_fits}" todir="${judas.HOME}/lib/external" />    
+    <copy file="${dst_fits}" todir="${ext.dir}" />    
     <!-- -->
     <!--
     <get src="${src_hdf5}" dest="${dst_hdf5}" usetimestamp="yes" />
@@ -206,14 +269,9 @@
     <unzip src="${dst_hdf-java_win64}" dest="${tmp}" />
     -->
     <!-- -->
-    <get src="${src_jython}" dest="${dst_jython}" usetimestamp="yes" />
-    <exec executable="java">
-      <arg line="-jar ${dst_jython} -s -d /home/iugonet/jython${jython_version}" />
-    </exec>
-    <!-- -->
     <get src="${src_jeditor}" dest="${dst_jeditor}" usetimestamp="yes" />
     <unzip src="${dst_jeditor}" dest="${tmp}" />
-    <copy file="${tmp}/jEditorGPL.jar" todir="${judas.HOME}/lib/external" />    
+    <copy file="${tmp}/jEditorGPL.jar" todir="${ext.dir}" />    
     <!-- couldn't execute get task behind the http proxy to ftp server -->
 <!--
     <ftp server="ftp.unidata.ucar.edu" binary="yes" action="get">
@@ -222,35 +280,53 @@
       </fileset>
     </ftp>
 -->
+<antcall target="netcdf_without_proxy" />
+<antcall target="netcdf_with_proxy" />
 <!--
-    <get src="${src_netcdf}" dest="${dst_netcdf}" usetimestamp="yes" />
--->
-    <echo message="${src_netcdf}" />    
     <exec executable="curl" dir="${tmp}">
-      <arg line="-O ${src_netcdf} -o ${netcdf}" />
+      <arg line="-O ${src_netcdf} -o ${netcdf} - -proxy ${http.proxyHost}:${http.proxyPort}" />
     </exec>
-    <copy file="${dst_netcdf}" todir="${judas.HOME}/lib/external" />
+    <copy file="${dst_netcdf}" todir="${ext.dir}" />
+-->
 
-    <!-- -->
-    <get src="${src_jpf}" dest="${dst_jpf}" usetimestamp="yes" />
-    <unzip src="${dst_jpf}" dest="${tmp}" />
-    <copy file="${tmp}/jpf.jar" todir="${judas.HOME}/lib/external" />
     <!-- -->
     <get src="${src_groovy}" dest="${dst_groovy}" usetimestamp="yes" />
     <unzip src="${dst_groovy}" dest="${tmp}" />
-    <copy file="${tmp}/groovy-${groovy_version}/lib/groovy-${groovy_version}.jar" todir="${judas.HOME}/lib/external" />
+    <copy file="${tmp}/groovy-${groovy_version}/lib/groovy-${groovy_version}.jar" todir="${ext.dir}" />
     <!-- -->
     <get src="${src_scala}" dest="${dst_scala}" usetimestamp="yes" />
     <untar src="${dst_scala}" dest="${tmp}" compression="gzip" />
-    <copy file="${tmp}/${scala_prefix}/lib/scala-library.jar" todir="${judas.HOME}/lib/external" />
+    <copy file="${tmp}/${scala_prefix}/lib/scala-library.jar" todir="${ext.dir}" />
     <!-- -->
-    <get src="${src_jruby}" dest="${dst_jruby}" usetimestamp="yes" />
+    <get src="${src_jrubyComplete}" dest="${dst_jrubyComplete}" usetimestamp="yes" />
+    <copy file="${dst_jrubyComplete}" todir="${ext.dir}" />
+    <!--
     <unzip src="${dst_jruby}" dest="${tmp}" />
     <exec executable="ant" dir="${tmp}/jruby-${jruby_version}">
       <arg line="jar jar-console" />
     </exec>
-    <copy file="${tmp}/jruby-${jruby_version}/lib/jruby.jar" todir="${judas.HOME}/lib/external" />    
-    <copy file="${tmp}/jruby-${jruby_version}/lib/jruby-console.jar" todir="${judas.HOME}/lib/external" />
+    <copy file="${tmp}/jruby-${jruby_version}/lib/jruby.jar" todir="${ext.dir}" />    
+    <copy file="${tmp}/jruby-${jruby_version}/lib/jruby-console.jar" todir="${ext.dir}" />
+    -->
+    <!-- -->
+    <get src="${src_readline}" dest="${dst_readline}" usetimestamp="yes" />
+    <copy file="${dst_readline}" todir="${ext.dir}" />
+    <get src="${src_jline}" dest="${dst_jline}" usetimestamp="yes" />
+    <copy file="${dst_jline}" todir="${ext.dir}" />
+  </target>
+
+  <target name="netcdf_with_proxy" if="${http.proxyHost}" >
+    <exec executable="curl" dir="${tmp}">
+      <arg line="-O ${src_netcdf} -o ${netcdf} --proxy ${http.proxyHost}:${http.proxyPort}" />
+    </exec>
+    <copy file="${dst_netcdf}" todir="${ext.dir}" />
+  </target>
+
+  <target name="netcdf_without_proxy" unless="${http.proxyHost}" >
+    <exec executable="curl" dir="${tmp}">
+      <arg line="-O ${src_netcdf} -o ${netcdf}" />
+    </exec>
+    <copy file="${dst_netcdf}" todir="${ext.dir}" />
   </target>
 
   <target name="final_message" description="Display final message">
@@ -259,6 +335,9 @@
 
   <condition property="have.resources.tmp.maven">
     <available file="${tmp}/${maven}" />
+  </condition>
+  <condition property="have.resources.tmp">
+    <available file="${tmp}" />
   </condition>
   <target name="mkdir.tmp" description="Make dir ${tmp}" unless="${have.resources.tmp}">
     <mkdir dir="${tmp}" />
@@ -302,6 +381,17 @@
       <sourcepath path="workspace/Tplot/src" />
       <sourcepath path="workspace/XYplot/src" />
     </javadoc>
+  </target>
+
+  <target name="naturalearth" description="Install naturalearth">
+    <get src="${src_ne_coastline_low}" dest="${dst_ne_coastline_low}" usetimestamp="yes" />
+    <unzip src="${dst_ne_coastline_low}" dest="${tmp}" />
+    <get src="${src_ne_land_low}" dest="${dst_ne_land_low}" usetimestamp="yes" />
+    <unzip src="${dst_ne_land_low}" dest="${tmp}" />
+    <get src="${src_ne_land_ocean}" dest="${dst_ne_land_ocean}" usetimestamp="yes" />
+    <unzip src="${dst_ne_land_ocean}" dest="${tmp}" />
+    <get src="${src_ne_land_rivers_lake_centerlines}" dest="${dst_ne_land_rivers_lake_centerlines}" usetimestamp="yes" />
+    <unzip src="${dst_ne_land_rivers_lake_centerlines}" dest="${tmp}" />
   </target>
 
 </project>

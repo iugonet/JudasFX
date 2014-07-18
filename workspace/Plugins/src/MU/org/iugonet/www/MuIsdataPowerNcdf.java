@@ -3,14 +3,12 @@ package org.iugonet.www;
 import java.net.URL;
 import java.util.ArrayList;
 
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.data.time.Second;
-import org.jfree.data.time.TimeSeriesCollection;
-
+import javafx.scene.chart.XYChart.Series;
+import lombok.Data;
 import ucar.ma2.Array;
 import ucar.nc2.NetcdfFile;
 
+@Data
 public class MuIsdataPowerNcdf extends Tplot {
 
 	public MuIsdataPowerNcdf() {
@@ -80,21 +78,12 @@ public class MuIsdataPowerNcdf extends Tplot {
 	}
 
 	@Override
-	public TimeSeriesCollection load(URL url) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	@Override
-	public ChartPanel getChartPanel() {
+	public Series load(URL url) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public JFreeChart getChart() {
-		// TODO Auto-generated method stub
-		return null;
+	public void plot() {
+		
 	}
-
 }

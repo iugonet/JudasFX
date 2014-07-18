@@ -33,7 +33,7 @@
 
 	<!-- -->
 
-	<target name="jar" depends="compile" description="Jar">
+	<target name="jar" depends="clean, compile" description="Jar">
 		<jar jarfile="${jar.path}">
 			<fileset dir="${src.dir}" includes="**" />
 			<fileset dir="${bin.dir}" includes="**" />
@@ -42,7 +42,7 @@
 		<antcall target="sign" />
 	</target>
 	
-	<target name="compile" description="Compile">
+	<target name="compile" depends="clean" description="Compile">
 		<mkdir dir="${bin.dir}" />
 		<javac srcdir="${src.dir}" destdir="${bin.dir}" includeantruntime="false" classpathref="classpath" />
 	</target>

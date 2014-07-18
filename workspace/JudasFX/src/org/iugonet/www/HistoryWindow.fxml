@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iugonet.www.HistoryWindowController">
+   <children>
+      <SplitPane dividerPositions="0.9414715719063546" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <AnchorPane prefHeight="550.0" prefWidth="800.0">
+               <children>
+                  <ScrollPane prefHeight="550.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="800.0">
+                           <children>
+                              <TextArea prefHeight="550.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <tooltip>
+                                    <Tooltip text="Empty Tooltip" />
+                                 </tooltip></TextArea>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="800.0">
+               <children>
+                  <HBox prefHeight="600.0" prefWidth="800.0" spacing="10.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <children>
+                        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#handleSave" text="Save">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/save16.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Save" />
+                           </tooltip>
+                           <font>
+                              <Font size="11.0" />
+                           </font></Button>
+                        <Button fx:id="btnClose" layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleClose" text="Close">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/cancel16.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Close" />
+                           </tooltip>
+                           <font>
+                              <Font size="11.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

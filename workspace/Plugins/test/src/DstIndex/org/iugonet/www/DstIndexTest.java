@@ -1,5 +1,7 @@
 package org.iugonet.www;
 
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
 import java.net.URI;
 import java.net.URL;
 import java.beans.*;
@@ -27,11 +29,12 @@ public class DstIndexTest {
 
 	@Test
 	public void test01() {
-		String strUri = "spase://IUGONET/Granule/WDC_Kyoto/WDC/Dst/index/PT1H/dst198410_wdc";
 		URI uri;
+		
 		try {
-			uri = new URI(strUri);
+			uri = new URI("spase://IUGONET/Granule/WDC_Kyoto/WDC/Dst/index/PT1M/dst198410_wdc");
 			dstIndex.load(uri);
+			System.out.println(dstIndex.getSeries());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -50,10 +53,9 @@ public class DstIndexTest {
 
 	@Test
 	public void test02() {
-		String strUrl = "http://wdc-data.iugonet.org/data/hour/index/dst/1984/dst8410";
 		try {
-			URL url = new URL(strUrl);
-//			dstIndex.load(uri);		
+			URL url = new URL("http://wdc-data.iugonet.org/data/hour/index/dst/1984/dst8410");	
+			dstIndex.load(url);		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -62,10 +64,8 @@ public class DstIndexTest {
 	
 	@Test
 	public void test03() {
-		String strUri = "spase://IUGONET/Granule/WDC_Kyoto/WDC/Dst/index/PT1H/dst198410_wdc";
-		URI uri;
 		try {
-			uri = new URI(strUri);
+			URI uri = new URI("spase://IUGONET/Granule/WDC_Kyoto/WDC/Dst/index/PT1H/dst198410_wdc");
 			System.out.println(uri);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -76,11 +76,11 @@ public class DstIndexTest {
 	public void xmlEncoderTest() throws Exception {
 		URI uri = new URI(
 				"spase://IUGONET/Granule/ICSWSE/MAGDAS/AAB/fluxgate/PT1S_ICSWSE_storage/AAB_SEC_200811010000_mgd");
-		sample.read(uri);
-		
+		dstIndex.read(uri);
+
 		try{
 			XMLEncoder xmlEncoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("goods.xml")));
-			xmlEncoder.writeObject(goodsArray);
+//			xmlEncoder.writeObject(goodsArray);
 			xmlEncoder.close();
 		} catch(FileNotFoundException ex){
 			System.err.println(ex);
@@ -91,11 +91,11 @@ public class DstIndexTest {
 	public void xmlDecoderTest() throws Exception {
 		URI uri = new URI(
 				"spase://IUGONET/Granule/ICSWSE/MAGDAS/AAB/fluxgate/PT1S_ICSWSE_storage/AAB_SEC_200811010000_mgd");
-		sample.read(uri);
+		dstIndex.read(uri);
 		
 		try{
 			XMLDecoder xmlDecoder = new XMLDecoder(new BufferedInputStream(new FileInputStream("goods.xml")));
-			sample = (Sample)xmlDecoder.readObject();
+			dstIndex = (DstIndex)xmlDecoder.readObject();
 			xmlDecoder.close();
 		}catch(FileNotFoundException ex){
 			System.err.println(ex);

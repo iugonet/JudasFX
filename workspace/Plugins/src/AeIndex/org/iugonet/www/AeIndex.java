@@ -4,20 +4,18 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.net.URL;
 
-import org.iugonet.www.Tplot;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.data.time.Minute;
-import org.jfree.data.time.TimeSeriesCollection;
+import lombok.Data;
 
+import org.iugonet.www.Tplot;
+
+@Data
 public class AeIndex extends Tplot {
 
 	private BufferedReader bufferedReader;
 	private String strUrl = "http://wdc-data.iugonet.org/data/hour/index/ae/1957/ae.5707.ngdc5";
 	
 	public AeIndex() {
-		super(1);
+		super();
 		//timeSeries[0].setKey("AE index");
 	}
 	
@@ -113,25 +111,7 @@ public class AeIndex extends Tplot {
 		return null;
 	}
 
-	@Override
-	public ChartPanel getChartPanel() {
-		JFreeChart chart = getChart();
-
-		ChartPanel cpanel = new ChartPanel(chart);
-		return cpanel;
+	public void plot() {
+		
 	}
-
-	@Override
-	public JFreeChart getChart() {
-		JFreeChart chart = null;
-
-		String xlabel = "UTC";
-		String ylabel = "Dst index [nT]";
-
-		chart = ChartFactory.createTimeSeriesChart(null, xlabel, ylabel,
-				load(strUrl), false, true, false);
-
-		return chart;
-	}
-
 }

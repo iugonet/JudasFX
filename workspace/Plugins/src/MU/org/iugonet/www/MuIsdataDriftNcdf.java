@@ -4,15 +4,13 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.data.time.Second;
-import org.jfree.data.time.TimeSeriesCollection;
-
+import javafx.scene.chart.XYChart.Series;
+import lombok.Data;
 import ucar.ma2.Array;
 import ucar.nc2.NetcdfFile;
 import ucar.nc2.Variable;
 
+@Data
 public class MuIsdataDriftNcdf extends Tplot {
 
 	public MuIsdataDriftNcdf() {
@@ -80,23 +78,15 @@ public class MuIsdataDriftNcdf extends Tplot {
 			e.printStackTrace();
 		}	
 	}
-	
-	@Override
-	public TimeSeriesCollection load(URL url) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	@Override
-	public ChartPanel getChartPanel() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
-	public JFreeChart getChart() {
+	public Series load(URL url) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public void plot() {
+		
 	}
 
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="295.0" prefWidth="455.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="108.0" layoutY="60.0" prefHeight="295.0" prefWidth="455.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="295.0" fitWidth="455.0" layoutX="108.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/splash.png" />
+               </image>
+            </ImageView>
+            <ProgressBar fx:id="progressBar" layoutX="128.0" layoutY="231.0" prefHeight="10.0" prefWidth="455.0" progress="0.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

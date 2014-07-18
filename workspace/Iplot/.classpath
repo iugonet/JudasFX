@@ -3,8 +3,23 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test/src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/Aplot.jar"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/Iplot.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/Aplot.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/lombok.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/javacpp.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/ffmpeg.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/ffmpeg-linux-x86.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/ffmpeg-linux-x86_64.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/ffmpeg-macosx-x86_64.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/ffmpeg-windows-x86.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/ffmpeg-windows-x86_64.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/opencv.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/opencv-linux-x86.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/opencv-linux-x86_64.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/opencv-macosx-x86_64.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/opencv-windows-x86.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/opencv-windows-x86_64.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/javacv.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

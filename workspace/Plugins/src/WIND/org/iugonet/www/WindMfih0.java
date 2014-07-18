@@ -4,18 +4,16 @@ import java.lang.Double;
 import java.net.URI;
 import java.net.URL;
 
+import javafx.scene.chart.XYChart.Series;
+import lombok.Data;
 import gsfc.nssdc.cdf.CDF;
 import gsfc.nssdc.cdf.util.Epoch;
 import gsfc.nssdc.cdf.Variable;
 
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.data.time.TimeSeriesCollection;
-
+@Data
 public class WindMfih0 extends Tplot {
 
 	public WindMfih0() {
-//		super(43);
 		super(3);
 	}
 	
@@ -68,23 +66,15 @@ public class WindMfih0 extends Tplot {
 			e.printStackTrace();
 		}		
 	}
-	
-	@Override
-	public TimeSeriesCollection load(URL url) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	@Override
-	public ChartPanel getChartPanel() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
-	public JFreeChart getChart() {
+	public Series load(URL url) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public void plot() {
+		
 	}
 
 }

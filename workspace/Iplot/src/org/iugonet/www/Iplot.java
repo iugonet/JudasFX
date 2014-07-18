@@ -1,42 +1,25 @@
 package org.iugonet.www;
 
-import java.net.URI;
-import java.net.URL;
-
-import javax.swing.JPanel;
+import org.bytedeco.javacpp.opencv_core.IplImage;
+import org.bytedeco.javacpp.opencv_highgui;
+import org.bytedeco.javacpp.opencv_imgproc;
+import org.bytedeco.javacv.CanvasFrame;
 
 abstract public class Iplot extends Aplot {
 
 	Iplot(){
-		/*
-		File file = new File("photo.jpg");
-		BufferedImage img = ImageIO.read(file);
-
-		// 画像の書き込み
-		file = new File("photo.png");
-		ImageIO.write(img, "PNG", file); 
-		
-		String[] format = ImageIO.getReaderFormatNames();
-		System.out.print("R: ");
-		for(int i=0; i<format.length; i++){
-		        if(i != 0)      System.out.print(", ");
-		        System.out.print(format[i]);
-		}
-		System.out.println();
-
-		format = ImageIO.getWriterFormatNames();
-		System.out.print("W: ");
-		for(int i=0; i<format.length; i++){
-		        if(i != 0)      System.out.print(", ");
-		        System.out.print(format[i]);
-		}
-		System.out.println(); 
-		*/
-	}
-
-	abstract public JPanel load(URL url);
-
-	public JPanel load(URI uri) {
-		return this.load(this.resolve(uri));
+		IplImage src = opencv_highgui.cvLoadImage("/tmp/photo.png");
+		IplImage dst = IplImage.create(src.width(), src.height(), src.depth(), src.nChannels());
+			
+//		opencv_imgproc.cvSmooth(src, dst, opencv_imgproc.CV_GAUSSIAN, 3);
+		opencv_imgproc.cvSmooth(src, dst);
+//		opencv_imgproc.cvSmooth(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+			
+		final CanvasFrame srcframe = new CanvasFrame("src");
+		final CanvasFrame dstframe = new CanvasFrame("dst");
+		srcframe.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
+		dstframe.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
+		srcframe.showImage(src);
+		dstframe.showImage(dst);
 	}
 }

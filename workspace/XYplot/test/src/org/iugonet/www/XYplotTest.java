@@ -1,44 +1,55 @@
 package org.iugonet.www;
 
-import java.beans.*;
-import java.io.*;
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
+
 import java.net.URI;
 import java.net.URL;
 
-import static org.junit.Assert.*;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.data.xy.XYSeriesCollection;
+import javafx.scene.chart.XYChart.Series;
+import lombok.Data;
+
+import org.iugonet.www.XYplot;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 public class XYplotTest {
 
-	class Sample extends XYplot{
-
-		@Override
-		public ChartPanel getChartPanel() {
-			return null;
+	@Data
+	class Sample extends XYplot {
+		Sample(){
+			super();
 		}
 
-		@Override
-		public JFreeChart getChart() {
-			return null;
+		Sample(int dimension) {
+//			super(dimension);
+			super();
 		}
 
-		@Override
-		public XYSeriesCollection load(String strUrl) {
-			return null;
-
-		}
-
-		@Override
-		void read(URL url) {	
+		void file_http_copy(String start, String end) {
 		}
 		
+		@Override
+		public Series load(URI uri) {
+			return null;
+		}
+		
+		@Override
+		void read(URL url) {
+		}
+
+		@Override
+		public void read(URI uri) {
+		}
+
+		@Override
+		public Series load(URL url) {
+			// TODO Auto-generated method stub
+			return null;
+		}
 	}
-	
+
 	Sample sample;
 	
 	@Before
@@ -51,40 +62,13 @@ public class XYplotTest {
 	}
 
 	@Test
-	public void test01() {
-		sample.add(1, 1, 0);
-		sample.add(1, 2, 0);
-		assertEquals(1,1);
+	public void test() {
+		sample.add(1, 0);
+		sample.add(2, 1);
+		sample.add(3, 0);
+		System.out.println(sample.getSeries().getData().toString());
+
+		assertThat(1,is(1));
 	}
 
-	@Test
-	public void xmlEncoderTest() throws Exception {
-		URI uri = new URI(
-				"spase://IUGONET/Granule/ICSWSE/MAGDAS/AAB/fluxgate/PT1S_ICSWSE_storage/AAB_SEC_200811010000_mgd");
-		sample.read(uri);
-		
-		try{
-			XMLEncoder xmlEncoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("goods.xml")));
-			xmlEncoder.writeObject(sample);
-			xmlEncoder.close();
-		} catch(FileNotFoundException ex){
-			System.err.println(ex);
-		}
-	}
-	
-	@Test
-	public void xmlDecoderTest() throws Exception {
-		URI uri = new URI(
-				"spase://IUGONET/Granule/ICSWSE/MAGDAS/AAB/fluxgate/PT1S_ICSWSE_storage/AAB_SEC_200811010000_mgd");
-		sample.read(uri);
-		
-		try{
-			XMLDecoder xmlDecoder = new XMLDecoder(new BufferedInputStream(new FileInputStream("goods.xml")));
-			sample = (Sample) xmlDecoder.readObject();
-			xmlDecoder.close();
-		}catch(FileNotFoundException ex){
-			System.err.println(ex);
-			return;
-		}	
-	}
 }

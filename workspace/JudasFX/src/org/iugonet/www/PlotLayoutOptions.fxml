@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iugonet.www.PlotLayoutOptionsController">
+   <children>
+      <SplitPane dividerPositions="0.9364548494983278" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.7977386934673367" layoutX="72.0" layoutY="142.0" prefHeight="544.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane maxWidth="550.0" minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="550.0">
+                           <children>
+                              <GridPane prefHeight="542.0" prefWidth="631.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.0" minWidth="10.0" prefWidth="263.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="87.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="200.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="175.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="437.0" minHeight="10.0" prefHeight="437.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <CheckBox mnemonicParsing="false" text="Show Data Component">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <CheckBox mnemonicParsing="false" text="Automatic Panels">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </CheckBox>
+                                       </children>
+                                    </HBox>
+                                    <Label text="- CREATE PLOT -" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font></Label>
+                                    <VBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label text="Add:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                          <Button mnemonicParsing="false" text="Line" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/arrow-1-right16.png" />
+                                                   </image></ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Button>
+                                          <Button mnemonicParsing="false" text="Spec." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/arrow-1-right16.png" />
+                                                   </image></ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Button>
+                                       </children>
+                                    </VBox>
+                                    <TabPane prefHeight="366.0" prefWidth="265.0" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="1">
+                                      <tabs>
+                                        <Tab text="Dependent Variable">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                          </content>
+                                        </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                    <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <HBox GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <children>
+                                          <ListView prefHeight="113.0" prefWidth="210.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                          <VBox>
+                                             <children>
+                                                <Label text="Variables:" />
+                                                <Button mnemonicParsing="false" text="Add/Edit" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/zoom-in16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                   <tooltip>
+                                                      <Tooltip text="Add/Edit" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="150.0">
+                           <children>
+                              <VBox layoutX="-43.0" layoutY="36.0" prefHeight="542.0" prefWidth="288.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <children>
+                                    <VBox layoutX="14.0" layoutY="36.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Panels:">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="14.0" layoutY="36.0" mnemonicParsing="false" text="Add">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/add16.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="63.0" layoutY="107.0" mnemonicParsing="false" text="Remove">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/minus16.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="32.0" layoutY="164.0" mnemonicParsing="false" text="Edit">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/wrench16.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                    <GridPane layoutX="-43.0" layoutY="190.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/arrow-1-left16.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                          <Button mnemonicParsing="false" GridPane.columnIndex="1">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/arrow-1-up16.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                          <Button mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/arrow-1-down16.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                          <Button mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/arrow-1-right16.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </GridPane>
+                                    <GridPane>
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.0" minWidth="10.0" prefWidth="81.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="10.0" prefWidth="78.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Cols Per Page:" GridPane.rowIndex="5">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField prefWidth="30.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                             <tooltip>
+                                                <Tooltip text="Integer:" />
+                                             </tooltip>
+                                          </TextField>
+                                          <HBox GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                             <children>
+                                                <Button layoutX="32.0" layoutY="356.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-down8.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Down" />
+                                                   </tooltip>
+                                                </Button>
+                                                <Button layoutX="76.0" layoutY="344.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-up8.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Up" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label text="Rows Per Page:" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField prefWidth="30.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <tooltip>
+                                                <Tooltip text="Integer:" />
+                                             </tooltip>
+                                          </TextField>
+                                          <HBox GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                             <children>
+                                                <Button layoutX="32.0" layoutY="356.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-down8.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Down" />
+                                                   </tooltip>
+                                                </Button>
+                                                <Button layoutX="76.0" layoutY="344.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-up8.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Up" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label text="Col Span:" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField prefWidth="30.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <tooltip>
+                                                <Tooltip text="Integer:" />
+                                             </tooltip>
+                                          </TextField>
+                                          <HBox GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <children>
+                                                <Button layoutX="32.0" layoutY="356.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-down8.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Down" />
+                                                   </tooltip>
+                                                </Button>
+                                                <Button layoutX="76.0" layoutY="344.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-up8.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Up" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label text="Row Span:" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField prefWidth="30.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <tooltip>
+                                                <Tooltip text="Integer:" />
+                                             </tooltip>
+                                          </TextField>
+                                          <HBox GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <children>
+                                                <Button layoutX="32.0" layoutY="356.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-down8.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Down" />
+                                                   </tooltip>
+                                                </Button>
+                                                <Button layoutX="76.0" layoutY="344.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-up8.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Up" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label text="Column:" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField prefWidth="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <tooltip>
+                                                <Tooltip text="Integer:" />
+                                             </tooltip>
+                                          </TextField>
+                                          <HBox GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <children>
+                                                <Button layoutX="32.0" layoutY="356.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-down8.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Down" />
+                                                   </tooltip>
+                                                </Button>
+                                                <Button layoutX="76.0" layoutY="344.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-up8.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Up" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label text="Row:">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField prefWidth="30.0" GridPane.columnIndex="1">
+                                             <tooltip>
+                                                <Tooltip text="Integer:" />
+                                             </tooltip>
+                                          </TextField>
+                                          <HBox GridPane.columnIndex="2">
+                                             <children>
+                                                <Button layoutX="32.0" layoutY="356.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-down8.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Down" />
+                                                   </tooltip>
+                                                </Button>
+                                                <Button layoutX="76.0" layoutY="344.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-up8.png" />
+                                                         </image></ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Up" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </GridPane>
+                                    <VBox spacing="10.0">
+                                       <children>
+                                          <Button layoutX="34.0" layoutY="468.0" mnemonicParsing="false" text="Lock To Panel">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/lock16.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="45.0" layoutY="503.0" mnemonicParsing="false" text="Unlock Panels">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/unlock16.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <HBox spacing="10.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <children>
+                        <Button fx:id="btnOK" mnemonicParsing="false" onAction="#handleOK" text="OK">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/done16.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="11.0" />
+                           </font></Button>
+                        <Button fx:id="btnApply" layoutX="112.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleApply" text="Apply">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/done16.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="11.0" />
+                           </font></Button>
+                        <Button fx:id="btnCancel" layoutX="185.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/cancel16.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="11.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -20,6 +20,20 @@
 	<path id="classpath">
 		<pathelement location="${src.dir}" />
 		<pathelement location="${lib.dir}/Aplot.jar" />
+		<pathelement location="${ext.dir}/javacv.jar" />
+		<pathelement location="${ext.dir}/javacpp.jar" />
+		<pathelement location="${ext.dir}/opencv.jar" />
+		<pathelement location="${ext.dir}/opencv-linux-x86.jar" />
+		<pathelement location="${ext.dir}/opencv-linux-x86_64.jar" />
+		<pathelement location="${ext.dir}/opencv-windows-x86.jar" />
+		<pathelement location="${ext.dir}/opencv-windows-x86_64.jar" />
+		<pathelement location="${ext.dir}/opencv-macosx-x86_64.jar" />
+		<pathelement location="${ext.dir}/ffmpeg.jar" />
+		<pathelement location="${ext.dir}/ffmpeg-linux-x86.jar" />
+		<pathelement location="${ext.dir}/ffmpeg-linux-x86_64.jar" />
+		<pathelement location="${ext.dir}/ffmpeg-windows-x86.jar" />
+		<pathelement location="${ext.dir}/ffmpeg-windows-x86_64.jar" />
+		<pathelement location="${ext.dir}/ffmpeg-macosx-x86_64.jar" />
 	</path>
 		
 	<path id="test.classpath">
@@ -27,11 +41,25 @@
 		<pathelement location="${test.bin}" />
 		<pathelement location="${ext.dir}/${junit.jar}" />
 		<pathelement location="${lib.dir}/Aplot.jar" />
+		<pathelement location="${ext.dir}/javacv.jar" />
+		<pathelement location="${ext.dir}/javacpp.jar" />
+		<pathelement location="${ext.dir}/opencv.jar" />
+		<pathelement location="${ext.dir}/opencv-linux-x86.jar" />
+		<pathelement location="${ext.dir}/opencv-linux-x86_64.jar" />
+		<pathelement location="${ext.dir}/opencv-windows-x86.jar" />
+		<pathelement location="${ext.dir}/opencv-windows-x86_64.jar" />
+		<pathelement location="${ext.dir}/opencv-macosx-x86_64.jar" />
+		<pathelement location="${ext.dir}/ffmpeg.jar" />
+		<pathelement location="${ext.dir}/ffmpeg-linux-x86.jar" />
+		<pathelement location="${ext.dir}/ffmpeg-linux-x86_64.jar" />
+		<pathelement location="${ext.dir}/ffmpeg-windows-x86.jar" />
+		<pathelement location="${ext.dir}/ffmpeg-windows-x86_64.jar" />
+		<pathelement location="${ext.dir}/ffmpeg-macosx-x86_64.jar" />
 	</path>
 	
 	<!-- -->
 		
-	<target name="jar" depends="compile" description="Jar">
+	<target name="jar" depends="clean, compile" description="Jar">
 		<subant>
 			<fileset file="../Aplot/build.xml" />
 		</subant>
@@ -41,7 +69,7 @@
 		</jar>
 	</target>
 
-	<target name="compile" description="Compile">
+	<target name="compile" depends="clean" description="Compile">
 		<subant>
 			<fileset file="../Aplot/build.xml" />
 		</subant>

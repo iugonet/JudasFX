@@ -10,6 +10,9 @@ import java.net.URI;
 import java.net.URL;
 import java.net.URLConnection;
 
+import lombok.Data;
+
+@Data
 abstract public class Aplot {
 
 	private final String DEFAULT_ROOT_DATA_DIR = "/tmp/data";
@@ -20,8 +23,8 @@ abstract public class Aplot {
 	private String themisDataDir = DEFAULT_THEMIS_DATA_DIR;
 	private String themisRemoteDataDir = DEFAULT_THEMIS_REMOTE_DATA_DIR;
 
-	private int paradigm; // 1: Experimental Sci., 2: Theoretical Sci., 3:
-							// Computational Sci.
+	private int scientificParadigm; // 1: Experimental Sci., 2: Theoretical Sci.,
+						         	// 3: Computational Sci.
 
 	Aplot() {
 		String rootDataDir = System.getenv("ROOT_DATA_DIR");
@@ -48,30 +51,6 @@ abstract public class Aplot {
 		if (themisRemoteDataDir != null) {
 			setThemisRemoteDataDir(themisRemoteDataDir);
 		}
-	}
-
-	public void setRootDataDir(String rootDataDir) {
-		this.rootDataDir = rootDataDir;
-	}
-
-	public String getRootDataDir() {
-		return this.rootDataDir;
-	}
-
-	public void setThemisDataDir(String themisDataDir) {
-		this.themisDataDir = themisDataDir;
-	}
-
-	public String getThemisDataDir() {
-		return this.themisDataDir;
-	}
-
-	public void setThemisRemoteDataDir(String themisRemoteDataDir) {
-		this.themisRemoteDataDir = themisRemoteDataDir;
-	}
-
-	public String getThemisRemoteDataDir() {
-		return this.themisRemoteDataDir;
 	}
 
 	public URL resolve(URI uri) {
@@ -158,11 +137,6 @@ abstract public class Aplot {
 	}
 
 	@Deprecated
-	public void file_http_copy(String strUrl) {
-		this.download(strUrl);
-	}
-
-	@Deprecated
 	public void file_http_copy(URL url) {
 		this.download(url);
 	}
@@ -170,15 +144,6 @@ abstract public class Aplot {
 	@Deprecated
 	public void file_http_copy(URI uri) {
 		this.download(uri);
-	}
-
-	public void download(String strUrl) {
-		try {
-			URL url = new URL(strUrl);
-			this.download(url);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 
 	public void download(URL url) {
@@ -224,30 +189,18 @@ abstract public class Aplot {
 		this.download(this.resolve(uri));
 	}
 
-	public void read(String strUrl) {
-		try {
-			URL url = new URL(strUrl);
-			this.read(url);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 	abstract void read(URL url);
 
 	public void read(URI uri) {
 		this.read(this.resolve(uri));
 	}
 
-	public int getParadigm() {
-		return paradigm;
-	}
-
-	public void setParadigm(int paradigm) {
-		if (paradigm == 1 || paradigm == 2 || paradigm == 3) {
-			this.paradigm = paradigm;
+	public boolean setScientificParadigm(int number) {
+		if (number == 1 || number == 2 || number == 3) {
+			this.scientificParadigm = number;
+			return true;
 		} else {
-			//
+			return false;
 		}
 	}
 }

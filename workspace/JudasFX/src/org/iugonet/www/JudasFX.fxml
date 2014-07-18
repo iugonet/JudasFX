@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iugonet.www.JudasFXController">
+   <children>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="itemOpenThemisDocument" mnemonicParsing="false" onAction="#handleOpenThemisDocument" text="Open SPEDAS Document...">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="itemSaveThemisDocument" mnemonicParsing="false" onAction="#handleSaveThemisDocument" text="Save SPEDAS Document...">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="itemSaveThemisDocumentAs" mnemonicParsing="false" onAction="#handleSaveThemisDocumentAs" text="Save SPEDAS Document As..." />
+                        <Menu mnemonicParsing="false" text="Template">
+                          <items>
+                            <MenuItem fx:id="itemOpenTemplate" mnemonicParsing="false" onAction="#handleOpenTemplate" text="Open Template..." />
+                              <MenuItem fx:id="itemSaveTemplate" mnemonicParsing="false" onAction="#handleSaveTemplate" text="Save Template..." />
+                              <MenuItem fx:id="itemSaveTemplateAs" mnemonicParsing="false" onAction="#handleSaveTemplateAs" text="Save Template As..." />
+                              <Menu mnemonicParsing="false" text="Reset Template">
+                                <items>
+                                  <MenuItem fx:id="itemResetPageTemplate" mnemonicParsing="false" onAction="#handleResetPageTemplate" text="Reset Page Template" />
+                                    <MenuItem fx:id="itemResetPanelTemplate" mnemonicParsing="false" onAction="#handleResetPanelTemplate" text="Reset Panel Template" />
+                                    <MenuItem fx:id="itemResetLegendTemplate" mnemonicParsing="false" onAction="#handleResetLegendTemplate" text="Reset Legend Template" />
+                                    <MenuItem fx:id="itemResetXAxisTemplate" mnemonicParsing="false" onAction="#handleResetXAxisTemplate" text="Reset X-Axis Template" />
+                                    <MenuItem fx:id="itemResetYAxisTemplate" mnemonicParsing="false" onAction="#handleResetYAxisTemplate" text="Reset Y-Axis Template" />
+                                    <MenuItem fx:id="itemResetZAxisTemplate" mnemonicParsing="false" onAction="#handleResetZAxisTemplate" text="Reset Z-Axis Template" />
+                                    <MenuItem fx:id="itemResetLineTemplate" mnemonicParsing="false" onAction="#handleResetLineTemplate" text="Reset Line Template" />
+                                    <MenuItem fx:id="itemResetVariableTemplate" mnemonicParsing="false" onAction="#handleResetVariableTemplate" text="Reset Variable Template" />
+                                </items>
+                              </Menu>
+                          </items>
+                        </Menu>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="itemLoadData" mnemonicParsing="false" onAction="#handleLoadData" text="Load Data" />
+                        <MenuItem fx:id="itemLoadThemisCdf" mnemonicParsing="false" onAction="#handleLoadThemisCdf" text="Load Data using CDAWeb" />
+                        <MenuItem fx:id="itemGenerateThemisOverviewPlot" mnemonicParsing="false" onAction="#handleGenerateThemisOverviewPlot" text="Load CDF" />
+                        <MenuItem fx:id="itemSaveDataAs" mnemonicParsing="false" onAction="#handleSaveDataAs" text="Save Data As..." />
+                        <MenuItem fx:id="itemManageDataAndImportExportTplotVariables" mnemonicParsing="false" onAction="#handleManageDataAndImportExportTplotVariables" text="Manage Data and Import/Export Tplot Variables..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="itemExportToImageFile" mnemonicParsing="false" onAction="#handleExportToImageFile" text="Export To Image File..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="itemPrint" mnemonicParsing="false" onAction="#handlePrint" text="Print...">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="itemPrintSetUp" mnemonicParsing="false" onAction="#handlePrintSetup" text="Print Setup" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="itemConfigurationSettings" mnemonicParsing="false" onAction="#handleConfigurationSettings" text="Configuration Settings..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem id="menuItem_Exit" fx:id="itemExit" mnemonicParsing="false" onAction="#handleExit" text="Exit">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem fx:id="itemCopy" mnemonicParsing="false" onAction="#handleCopy" text="Copy">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="itemDeleteMarker" mnemonicParsing="false" onAction="#handleDeleteMarker" text="Delete Marker" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <Menu mnemonicParsing="false" text="Subset">
+                          <items>
+                            <MenuItem fx:id="itemPage" mnemonicParsing="false" onAction="#handlePage" text="Page" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem fx:id="itemMarkerSinglePanel" mnemonicParsing="false" onAction="#handleMarkerSinglePanel" text="Marker (Single Panel)" />
+                              <MenuItem fx:id="itemMarkerAllPanels" mnemonicParsing="false" onAction="#handleMarkerAllPanels" text="Marker (All Panels)" />
+                          </items>
+                        </Menu>
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="View">
+                     <items>
+                        <MenuItem fx:id="itemReflesh" mnemonicParsing="false" onAction="#handleReflesh" text="Reflesh">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="itemScrollForward" mnemonicParsing="false" onAction="#handleScrollForward" text="Scroll Forward (Right)" />
+                        <MenuItem fx:id="itemScrollBackward" mnemonicParsing="false" onAction="#handleScrollBackward" text="Scroll Backward (Left)" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="itemExpand" mnemonicParsing="false" onAction="#handleExpand" text="Expand (Tab)" />
+                        <MenuItem fx:id="itemReduce" mnemonicParsing="false" onAction="#handleReduce" text="Reduce (Backspace)" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="itemHistoryWindow" mnemonicParsing="false" onAction="#handleHistoryWindow" text="History Window" />
+                        <CheckMenuItem fx:id="itemLegend" mnemonicParsing="false" text="Legend" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Graph">
+                     <items>
+                        <MenuItem fx:id="itemPanelTracking" mnemonicParsing="false" onAction="#handlePanelTracking" text="Panel Tracking" />
+                        <MenuItem fx:id="itemTrackOnePanel" mnemonicParsing="false" onAction="#handleTrackOnePanel" text="Track One Panel" />
+                        <MenuItem fx:id="itemTrackAll" mnemonicParsing="false" onAction="#handleTrackAll" text="Track All" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="itemShowHorizontalTracking" mnemonicParsing="false" onAction="#handleShowHorizontalTracking" text="Show Horizontal Tracking" />
+                        <MenuItem fx:id="itemShowVerticalTracking" mnemonicParsing="false" onAction="#handleShowVerticalTracking" text="Show Vertical Tracking" />
+                        <MenuItem fx:id="itemRubberBandForXOnly" mnemonicParsing="false" onAction="#handleRubberBandForXOnly" text="Rubber Band for X-Only" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="itemQueryForMarkerTitle" mnemonicParsing="false" onAction="#handleQueryForMarkerTitle" text="Query for Marker Title" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="itemPlotLayoutOption" mnemonicParsing="false" onAction="#handlePlotLayoutOptions" text="Plot/Layout Options..." />
+                        <MenuItem fx:id="itemPageOptions" mnemonicParsing="false" onAction="#handlePageOptions" text="Page Options..." />
+                        <MenuItem fx:id="itemPanelOptions" mnemonicParsing="false" onAction="#handlePanelOptions" text="Panel Options..." />
+                        <MenuItem fx:id="itemLineOptions" mnemonicParsing="false" onAction="#handleLineOptions" text="Line Options..." />
+                        <MenuItem fx:id="itemLegendOptions" mnemonicParsing="false" onAction="#handleLegendOptions" text="Legend Options..." />
+                        <MenuItem fx:id="itemXAxisOptions" mnemonicParsing="false" onAction="#handleXAxisOptions" text="X Axis Options..." />
+                        <MenuItem fx:id="itemYAxisOptions" mnemonicParsing="false" onAction="#handleYAxisOptions" text="Y Axis Options..." />
+                        <MenuItem fx:id="itemZAxisOptions" mnemonicParsing="false" onAction="#handleZAxisOptions" text="Z Axis Options..." />
+                        <MenuItem fx:id="itemVariableOptions" mnemonicParsing="false" onAction="#handleVariableOptions" text="Variable Options..." />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Analysis">
+                     <items>
+                        <MenuItem fx:id="itemCalculate" mnemonicParsing="false" onAction="#handleCalculate" text="Calculate..." />
+                        <MenuItem fx:id="itemNudgeTraces" mnemonicParsing="false" onAction="#handleNudgeTraces" text="Nudge Traces" />
+                        <MenuItem fx:id="itemDataProcessing" mnemonicParsing="false" onAction="#handleDataProcessing" text="Data Processing..." />
+                        <MenuItem fx:id="itemVelocitySlices" mnemonicParsing="false" onAction="#handleVelocitySlices" text="Velocity Slices..." />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Plugins">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Generate GOES Overview Plot..." />
+                        <MenuItem mnemonicParsing="false" text="Generate THEMIS Overview Plot..." />
+                        <MenuItem mnemonicParsing="false" text="THEMIS Particle Distribution Slices..." />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Pages">
+                     <items>
+                        <MenuItem fx:id="itemNew" mnemonicParsing="false" onAction="#handleNew" text="New">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="itemClose" mnemonicParsing="false" onAction="#handleClose" text="Close">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                     </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="itemHelpWindow" mnemonicParsing="false" onAction="#handleHelpWindow" text="Help Window..." />
+                        <MenuItem fx:id="itemHelpRequestForm" mnemonicParsing="false" onAction="#handleHelpRequestForm" text="Help Request Form..." />
+                        <MenuItem fx:id="itemOverviewPlotKey" mnemonicParsing="false" onAction="#handleOverviewPlotKey" text="Overview Plot Key..." />
+                        <MenuItem fx:id="itemAbout" mnemonicParsing="false" onAction="#handleAbout" text="About..." />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+          <AnchorPane prefHeight="34.0" prefWidth="798.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <GridPane prefHeight="561.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="268.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="547.0" minHeight="10.0" prefHeight="534.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox prefHeight="88.0" prefWidth="798.0">
+                           <children>
+                              <Button fx:id="btn0" mnemonicParsing="false" onAction="#handleOpenThemisDocument">
+                                 <tooltip>
+                                    <Tooltip text="Open File" />
+                                 </tooltip>
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0">
+                                       <image>
+                                          <Image url="@icons/folder16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btn1" mnemonicParsing="false" onAction="#handleSaveThemisDocument">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/save16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Save File" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btn2" mnemonicParsing="false" onAction="#handlePrint">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/print16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Print" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btn3" mnemonicParsing="false" onAction="#handleBtn3">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/window-stack16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Copy to Clipboard" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btn4" mnemonicParsing="false" onAction="#handleBtn4">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/zoom-in16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Load Data" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btn5" mnemonicParsing="false" onAction="#handleBtn5">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/zoom-out16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Manage GUI Data and Import and Export Tplot data" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btn6" mnemonicParsing="false" onAction="#handleBtn6">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/arrow-1-left16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Shift Left by major tick mark" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btn7" mnemonicParsing="false" onAction="#handleBtn7">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/arrow-1-right16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Shift Right by major tick mark" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btn8" mnemonicParsing="false" onAction="#handleBtn8">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/unfold-multiple16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Load Data" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btn9" layoutX="575.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleBtn9">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/settings16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Manage GUI Data Import and Export TPlot Data" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnLoadData" layoutX="609.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleLoadData">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/activity16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Plot Data" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnConsoleJython" mnemonicParsing="false" onAction="#handleConsoleJython">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/keyboard16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Jython Console" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnConsoleJRuby" layoutX="643.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleConsoleJRuby">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/keyboard16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="JRuby Console" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnConsoleGroovy" layoutX="384.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleConsoleGroovy">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/keyboard16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Groovy Console" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnConsoleScala" layoutX="707.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleConsoleScala">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/keyboard16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Scala Console" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnSimpleBrowser" mnemonicParsing="false" onAction="#handleSimpleBrowser">
+                                 <tooltip>
+                                    <Tooltip text="Metadata Browser" />
+                                 </tooltip>
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/database16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnHelpWindow" layoutX="739.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleHelpWindow">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/help16.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Help" />
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnYoutubeBrowser" layoutX="588.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleYoutubeBrowser">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/youtube.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="YouTube" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="btnFacebookBrowser" mnemonicParsing="false" onAction="#handleFacebookBrowser">
+                                 <tooltip>
+                                    <Tooltip text="Facebook" />
+                                 </tooltip>
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/facebook.gif" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnTwitterBrowser" layoutX="588.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleTwitterBrowser">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/twitter.png" />
+                                       </image></ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Twitter" />
+                                 </tooltip>
+                              </Button>
+                              <HBox>
+                                 <children>
+                                    <TextField prefWidth="50.0">
+                                       <tooltip>
+                                          <Tooltip text="Scale rate" />
+                                       </tooltip>
+                                    </TextField>
+                                    <HBox>
+                                       <children>
+                                          <Button fx:id="btnDown" mnemonicParsing="false" onAction="#handleDown">
+                                             <graphic>
+                                                <ImageView fitHeight="8.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/arrow-3-down8.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <tooltip>
+                                                <Tooltip text="Down" />
+                                             </tooltip>
+                                          </Button>
+                                          <Button fx:id="btnUp" mnemonicParsing="false" onAction="#handleUp">
+                                             <graphic>
+                                                <ImageView fitHeight="8.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/arrow-3-up8.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <tooltip>
+                                                <Tooltip text="Up" />
+                                             </tooltip>
+                                          </Button>
+                                          <Button fx:id="btnUp1" layoutX="36.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleUp">
+                                             <graphic>
+                                                <ImageView fitHeight="8.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/arrow-1-reduce.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <tooltip>
+                                                <Tooltip text="Reduces X range by major tick mark" />
+                                             </tooltip>
+                                          </Button>
+                                          <Button fx:id="btnUp11" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleUp">
+                                             <graphic>
+                                                <ImageView fitHeight="8.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/arrow-1-expand.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <tooltip>
+                                                <Tooltip text="Expands X range by major tick mark" />
+                                             </tooltip>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1000.0" prefWidth="800.0">
+                                 <children>
+                                    <GridPane prefHeight="1000.0" prefWidth="800.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <LineChart fx:id="lineChart" maxHeight="50.0" onDragDetected="#handleLineChart" prefHeight="50.0" prefWidth="798.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </LineChart>
+                                          <LineChart GridPane.rowIndex="6">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </LineChart>
+                                          <LineChart GridPane.rowIndex="7">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </LineChart>
+                                          <LineChart GridPane.rowIndex="2">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </LineChart>
+                                          <LineChart GridPane.rowIndex="3">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </LineChart>
+                                          <LineChart GridPane.rowIndex="1">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </LineChart>
+                                          <LineChart layoutX="10.0" layoutY="123.0" GridPane.rowIndex="4">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                             </yAxis>
+                                          </LineChart>
+                                          <LineChart layoutX="10.0" layoutY="498.0" GridPane.rowIndex="5">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                             </yAxis>
+                                          </LineChart>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

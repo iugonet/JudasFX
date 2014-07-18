@@ -1,0 +1,1064 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iugonet.www.IonElectronVelocitySlicesRotationsLegendController">
+   <children>
+      <SplitPane dividerPositions="0.9364548494983278" orientation="VERTICAL" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TabPane prefHeight="600.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="Main">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane layoutX="-17.0" layoutY="125.0" prefHeight="518.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <GridPane>
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <GridPane>
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints maxHeight="79.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="143.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Probe:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ListView prefHeight="126.0" prefWidth="201.0" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Probe" />
+                                                         </tooltip>
+                                                      </ListView>
+                                                   </children>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="1">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="148.0" minHeight="10.0" prefHeight="144.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Distribution Type:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Distribution Type" />
+                                                         </tooltip>
+                                                      </ListView>
+                                                   </children>
+                                                </GridPane>
+                                                <GridPane GridPane.columnIndex="2">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Units:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Coord:" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Units" />
+                                                         </tooltip>
+                                                      </ListView>
+                                                      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                                         <tooltip>
+                                                            <Tooltip text="Coord" />
+                                                         </tooltip>
+                                                      </ListView>
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <GridPane>
+                                                  <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Start Time:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Stop Time:" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Start Time" />
+                                                         </tooltip>
+                                                      </TextField>
+                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Stop Time" />
+                                                         </tooltip>
+                                                      </TextField>
+                                                      <Button mnemonicParsing="false" GridPane.columnIndex="2">
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/calendar-alt-1-16.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Calendar" />
+                                                         </tooltip>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/calendar-alt-1-16.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Calendar" />
+                                                         </tooltip>
+                                                      </Button>
+                                                   </children>
+                                                </GridPane>
+                                                <GridPane GridPane.rowIndex="1">
+                                                  <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Window Size (sec):">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Step Size (sec):" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField GridPane.columnIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Window Size (sec)" />
+                                                         </tooltip>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Step Size (sec)" />
+                                                         </tooltip>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                         <children>
+                                                            <Button mnemonicParsing="false">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@icons/arrow-3-down8.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <tooltip>
+                                                                  <Tooltip text="Down" />
+                                                               </tooltip>
+                                                            </Button>
+                                                            <Button mnemonicParsing="false">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@icons/arrow-3-up8.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <tooltip>
+                                                                  <Tooltip text="Up" />
+                                                               </tooltip>
+                                                            </Button>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                                         <children>
+                                                            <Button mnemonicParsing="false">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@icons/arrow-3-down8.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                               <tooltip>
+                                                                  <Tooltip text="Down" />
+                                                               </tooltip>
+                                                            </Button>
+                                                            <Button mnemonicParsing="false">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@icons/arrow-3-up8.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <tooltip>
+                                                                  <Tooltip text="Up" />
+                                                               </tooltip>
+                                                            </Button>
+                                                         </children>
+                                                      </HBox>
+                                                      <CheckBox mnemonicParsing="false" text="Center Time" GridPane.columnIndex="3">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Center Time" />
+                                                         </tooltip>
+                                                      </CheckBox>
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Options">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        </content>
+                      </Tab>
+                        <Tab text="Contamination">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane prefHeight="567.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <HBox spacing="10.0">
+                                             <children>
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Remove ESA Background">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </CheckBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox spacing="10.0" GridPane.rowIndex="1">
+                                             <children>
+                                                <GridPane prefHeight="129.0" prefWidth="461.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Type:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Number of Points:" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField text="3" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Number of Points" />
+                                                         </tooltip>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label text="Scaling:" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                         <tooltip>
+                                                            <Tooltip text="Scaling" />
+                                                         </tooltip>
+                                                      </TextField>
+                                                      <HBox spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                         <children>
+                                                            <Button layoutX="217.0" layoutY="436.0" mnemonicParsing="false">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@icons/arrow-3-down8.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <tooltip>
+                                                                  <Tooltip text="Empty Tooltip" />
+                                                               </tooltip>
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Button layoutX="284.0" layoutY="369.0" mnemonicParsing="false">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@icons/arrow-3-up8.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <tooltip>
+                                                                  <Tooltip text="Empty Tooltip" />
+                                                               </tooltip>
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                            </Button>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                         <children>
+                                                            <Button layoutX="33.0" layoutY="259.0" mnemonicParsing="false">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@icons/arrow-3-down8.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <tooltip>
+                                                                  <Tooltip text="Empty Tooltip" />
+                                                               </tooltip>
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Button layoutX="369.0" layoutY="216.0" mnemonicParsing="false">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@icons/arrow-3-up8.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <tooltip>
+                                                                  <Tooltip text="Empty Tooltip" />
+                                                               </tooltip>
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                            </Button>
+                                                         </children>
+                                                      </HBox>
+                                                      <ComboBox prefWidth="150.0" GridPane.columnIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                      </ComboBox>
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </HBox>
+                                          <HBox spacing="10.0" GridPane.rowIndex="3">
+                                             <children>
+                                                <Label layoutX="23.0" layoutY="322.0" text="Tolerance (stdv):">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox spacing="10.0">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="220.0" text="Method:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ComboBox layoutX="82.0" layoutY="215.0" prefWidth="150.0">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                      </ComboBox>
+                                                   </children>
+                                                </HBox>
+                                                <TextField layoutX="147.0" layoutY="317.0">
+                                                   <tooltip>
+                                                      <Tooltip text="Torerance (stdv)" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </TextField>
+                                                <HBox spacing="10.0">
+                                                   <children>
+                                                      <Label layoutX="23.0" layoutY="269.0" text="Fill Method:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ComboBox layoutX="114.0" layoutY="264.0" prefWidth="150.0">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                      </ComboBox>
+                                                   </children>
+                                                </HBox>
+                                                <Button layoutX="72.0" layoutY="371.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-down8.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="339.0" layoutY="317.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-up8.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <CheckBox mnemonicParsing="false" text="Remove SST Contamination" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <HBox spacing="10.0" GridPane.rowIndex="2">
+                                             <children>
+                                                <CheckBox layoutX="7.0" layoutY="492.0" mnemonicParsing="false" text="Remove SST Mask">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <TextField layoutX="163.0" layoutY="480.0">
+                                                   <tooltip>
+                                                      <Tooltip text="Remove SST mask" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button layoutX="346.0" layoutY="480.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-down8.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="36.0" layoutY="510.0" mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/arrow-3-up8.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Annotations">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane layoutX="69.0" layoutY="211.0" prefHeight="567.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <GridPane>
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="162.0" minHeight="10.0" prefHeight="162.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <GridPane GridPane.rowIndex="1">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="126.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Annotations:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Specify Number of Ticks:" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <GridPane GridPane.rowIndex="1">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints maxHeight="99.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <GridPane GridPane.rowIndex="1">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <RadioButton mnemonicParsing="false" text="Automatic">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton mnemonicParsing="false" text="Decimal Notation" GridPane.rowIndex="1">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton mnemonicParsing="false" text="Scientific Notation" GridPane.rowIndex="2">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                               </children>
+                                                            </GridPane>
+                                                            <GridPane>
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <Label text="Precision:">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" />
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </GridPane>
+                                                      <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                        <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <CheckBox mnemonicParsing="false" text="Major:">
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <CheckBox mnemonicParsing="false" text="Minor:" GridPane.rowIndex="1">
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <TextField GridPane.columnIndex="1" />
+                                                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false">
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                           <image>
+                                                                              <Image url="@icons/arrow-3-down8.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                     <tooltip>
+                                                                        <Tooltip text="Down" />
+                                                                     </tooltip>
+                                                                  </Button>
+                                                                  <Button mnemonicParsing="false">
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                           <image>
+                                                                              <Image url="@icons/arrow-3-up8.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                     <tooltip>
+                                                                        <Tooltip text="Up" />
+                                                                     </tooltip>
+                                                                  </Button>
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false">
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                           <image>
+                                                                              <Image url="@icons/arrow-3-down8.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                     <tooltip>
+                                                                        <Tooltip text="Down" />
+                                                                     </tooltip>
+                                                                  </Button>
+                                                                  <Button mnemonicParsing="false">
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                           <image>
+                                                                              <Image url="@icons/arrow-3-up8.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                     <tooltip>
+                                                                        <Tooltip text="Up" />
+                                                                     </tooltip>
+                                                                  </Button>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                </GridPane>
+                                                <Label text="X &amp; Y Axes:">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="155.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <GridPane GridPane.rowIndex="1">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="121.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Annotations:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Specify Number of Ticks:" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <GridPane GridPane.rowIndex="1">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                            <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints maxHeight="88.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <GridPane GridPane.rowIndex="1">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <RadioButton mnemonicParsing="false" text="Automatic">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton mnemonicParsing="false" text="Decimal Notation" GridPane.rowIndex="1">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton mnemonicParsing="false" text="Scientific Notation" GridPane.rowIndex="2">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                               </children>
+                                                            </GridPane>
+                                                            <GridPane>
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <ComboBox prefWidth="150.0" GridPane.columnIndex="1" />
+                                                                  <Label text="Precision:">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </GridPane>
+                                                      <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                        <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <CheckBox mnemonicParsing="false" text="Major:">
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <TextField GridPane.columnIndex="1" />
+                                                            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false">
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                           <image>
+                                                                              <Image url="@icons/arrow-3-down8.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                     <tooltip>
+                                                                        <Tooltip text="Down" />
+                                                                     </tooltip>
+                                                                  </Button>
+                                                                  <Button mnemonicParsing="false">
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                           <image>
+                                                                              <Image url="@icons/arrow-3-up8.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                     <tooltip>
+                                                                        <Tooltip text="Up" />
+                                                                     </tooltip>
+                                                                  </Button>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                </GridPane>
+                                                <Label text="Z Axis:">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane GridPane.rowIndex="2">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="Annotation Text size:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Button mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/arrow-3-down8.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Down" />
+                                                         </tooltip>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/arrow-3-up8.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Up" />
+                                                         </tooltip>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Plot Options">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <HBox spacing="10.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="Generate">
+                           <tooltip>
+                              <Tooltip text="Generate" />
+                           </tooltip>
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/settings16.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Close">
+                           <tooltip>
+                              <Tooltip text="Close" />
+                           </tooltip>
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/cancel16.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Export">
+                           <tooltip>
+                              <Tooltip text="Export" />
+                           </tooltip>
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/arrow-1-right16.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Export All">
+                           <tooltip>
+                              <Tooltip text="Export All" />
+                           </tooltip>
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/arrow-1-right16.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

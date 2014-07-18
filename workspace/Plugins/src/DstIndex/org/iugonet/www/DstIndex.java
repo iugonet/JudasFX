@@ -2,23 +2,20 @@ package org.iugonet.www;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.net.URI;
 import java.net.URL;
 
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.data.time.Second;
-import org.jfree.data.time.TimeSeries;
-import org.jfree.data.time.TimeSeriesCollection;
+import javafx.scene.chart.XYChart.Series;
+import lombok.Data;
 
+@Data
 public class DstIndex extends Tplot {
 
 	private BufferedReader bufferedReader;
-	private String strUrl = "http://wdc-data.iugonet.org/data/hour/index/dst/1984/dst8410";
-
+//	private URL url = new URL("http://wdc-data.iugonet.org/data/hour/index/dst/1984/dst8410");
+	
 	public DstIndex() {
-		super(1);
-		// timeSeries[0].setKey("Dst index");
+		super();
 	}
 
 	public static void main(String[] args) {
@@ -26,7 +23,9 @@ public class DstIndex extends Tplot {
 
 	}
 	
-	void read(URL url) {
+	void storeInTplot(URL url) {
+		this.download(url);
+		
 		String line;
 
 		try {
@@ -65,9 +64,9 @@ public class DstIndex extends Tplot {
 					// calendar.get(Calendar.ZONE_OFFSET);
 					//
 
-					Second second = new Second(0, 0, j++, dd, mm, yyyy);
+//					Second second = new Second(0, 0, j++, dd, mm, yyyy);
 
-					this.add(second, dst, 0);
+//					this.add(second, dst, 0);
 				}
 				// System.out.print(line.substring(117-1,120));
 			}
@@ -75,47 +74,23 @@ public class DstIndex extends Tplot {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Override
-	public TimeSeriesCollection load(URL url) {
-		TimeSeriesCollection timeSeriesCollection = new TimeSeriesCollection();
-		
-		DstIndex dstIndex = new DstIndex();
-		
-		try {
-			dstIndex.download(url);  // file_http_copy
-			dstIndex.read(url);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public Series load(URL url) {
+		// TODO Auto-generated method stub
 
-		TimeSeries[] timeSeries = new TimeSeries[1];
-		timeSeries[0] = dstIndex.getTimeSeries(0);
+		this.download(url);
+		this.read(url);
+		return null;
+	}
 
-		timeSeriesCollection.addSeries(dstIndex.getTimeSeries(0));
-		
-		return timeSeriesCollection;
+	@Override
+	void read(URL url) {
+		// TODO Auto-generated method stub
+		this.add(1, 2);
 	}
 	
-	@Override
-	public ChartPanel getChartPanel() {
-		JFreeChart chart = getChart();
-
-		ChartPanel cpanel = new ChartPanel(chart);
-		return cpanel;
+	public void plot() {
+		
 	}
-
-	@Override
-	public JFreeChart getChart() {
-		JFreeChart chart = null;
-
-		String xlabel = "UTC";
-		String ylabel = "Dst index [nT]";
-
-		chart = ChartFactory.createTimeSeriesChart(null, xlabel, ylabel,
-				load(strUrl), false, true, false);
-
-		return chart;
-	}
-
 }

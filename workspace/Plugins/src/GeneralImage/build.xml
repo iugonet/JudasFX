@@ -37,7 +37,7 @@
 
 	<!-- -->
 
-	<target name="jar" depends="clean,compile" description="Jar">
+	<target name="jar" depends="clean, compile" description="Jar">
 		<jar jarfile="${jar.path}">
 			<fileset dir="${src.dir}" includes="**/*.java" />
 			<fileset dir="${bin.dir}" includes="**/*.class" />
@@ -63,7 +63,7 @@
 		</jar>
 	</target>
 
-	<target name="compile" description="Compile">
+	<target name="compile" depends="clean" description="Compile">
 		<subant target="compile">
 			<fileset file="../../../Tplot/build.xml" />
 		</subant>

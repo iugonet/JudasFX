@@ -3,8 +3,10 @@ package org.iugonet.www;
 import java.awt.EventQueue;
 import java.net.URL;
 
+import lombok.Data;
 import gnu.getopt.Getopt;
 
+@Data
 public class MetadataHandler {
 	
 	private static String strUrl;

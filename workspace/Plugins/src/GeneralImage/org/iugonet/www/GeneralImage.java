@@ -9,8 +9,11 @@ import javax.media.jai.PlanarImage;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
+import lombok.Data;
+
 import com.sun.media.jai.widget.DisplayJAI;
 
+@Data
 public class GeneralImage extends Iplot {
 
 	private BufferedReader bufferedReader;
@@ -18,7 +21,6 @@ public class GeneralImage extends Iplot {
 
 	public GeneralImage() {
 		super();
-//		super(1);
 		// timeSeries[0].setKey("Dst index");
 	}
 	
@@ -27,7 +29,6 @@ public class GeneralImage extends Iplot {
 
 	}
 
-	@Override
 	void read(URL url) {
 		String line;
 
@@ -90,6 +91,10 @@ public class GeneralImage extends Iplot {
 		jpanel.add(newImagePane);
 		
 		return jpanel;
+	}
+	
+	public void plot() {
+		
 	}
 
 }

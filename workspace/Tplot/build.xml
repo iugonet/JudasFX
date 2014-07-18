@@ -19,23 +19,21 @@
 
 	<path id="classpath">
 		<pathelement location="${src.dir}" />
+		<pathelement location="${ext.dir}/${lombok.jar}" />
 		<pathelement location="${lib.dir}/Aplot.jar" />
-		<pathelement location="${ext.dir}/${jfreechart.jar}" />
-		<pathelement location="${ext.dir}/${jcommon.jar}" />
 	</path>
 	
 	<path id="test.classpath">
 		<pathelement path="./test/bin/org/iugonet/www" />
 		<pathelement location="${test.bin.dir}" />
+		<pathelement location="${ext.dir}/${lombok.jar}" />
 		<pathelement location="${ext.dir}/${junit.jar}" />
 		<pathelement location="${lib.dir}/Aplot.jar" />
-		<pathelement location="${ext.dir}/${jfreechart.jar}" />
-		<pathelement location="${ext.dir}/${jcommon.jar}" />
 	</path>
 
 	<!-- -->
 
-	<target name="jar" depends="compile" description="Jar">
+	<target name="jar" depends="clean, compile" description="Jar">
 		<subant>
 			<fileset file="../Aplot/build.xml" />
 		</subant>
@@ -45,7 +43,7 @@
 		</jar>
 	</target>
 
-	<target name="compile" description="Compile">
+	<target name="compile" depends="clean" description="Compile">
 		<subant>
 			<fileset file="../Aplot/build.xml" />
 		</subant>

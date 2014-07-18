@@ -3,15 +3,13 @@ package org.iugonet.www;
 import java.lang.Double;
 import java.net.URL;
 
+import javafx.scene.chart.XYChart.Series;
+import lombok.Data;
 import gsfc.nssdc.cdf.CDF;
 import gsfc.nssdc.cdf.util.Epoch;
 import gsfc.nssdc.cdf.Variable;
 
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.data.time.Second;
-import org.jfree.data.time.TimeSeriesCollection;
-
+@Data
 public class Lfrto extends Tplot {
 
 	public Lfrto() {
@@ -66,23 +64,14 @@ public class Lfrto extends Tplot {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Override
-	public TimeSeriesCollection load(URL url) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	@Override
-	public ChartPanel getChartPanel() {
+	public Series load(URL url) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public JFreeChart getChart() {
-		// TODO Auto-generated method stub
-		return null;
+	public void plot() {
+		
 	}
-
 }

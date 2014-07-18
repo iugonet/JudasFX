@@ -4,17 +4,16 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.net.URL;
 
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.data.time.Minute;
-import org.jfree.data.time.TimeSeriesCollection;
+import javafx.scene.chart.XYChart.Series;
+import lombok.Data;
 
+@Data
 public class AceMag extends Tplot {
 
 	private BufferedReader bufferedReader;
 
 	public AceMag() {
-		super(1);
+		super();
 		//timeSeries[0].setKey("ACE Magnetometer");
 	}
 	
@@ -79,21 +78,12 @@ public class AceMag extends Tplot {
 	}
 
 	@Override
-	public TimeSeriesCollection load(URL url) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	@Override
-	public ChartPanel getChartPanel() {
+	public Series load(URL url) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public JFreeChart getChart() {
-		// TODO Auto-generated method stub
-		return null;
+	public void plot() {
+		
 	}
-
 }

@@ -19,26 +19,28 @@
 
 	<path id="classpath">
 		<pathelement location="${src.dir}" />
+		<pathelement location="${ext.dir}/${lombok.jar}" />
 	</path>
 
 	<path id="test.classpath">
 		<pathelement path="." />
 		<pathelement location="${test.bin}" />
+		<pathelement location="${ext.dir}/${lombok.jar}" />
 		<pathelement location="${ext.dir}/${junit.jar}" />
 	</path>
 
 	<!-- -->
 
-	<target name="jar" depends="compile" description="jar">
+	<target name="jar" depends="clean, compile" description="jar">
 		<jar jarfile="${jar.path}">
 			<fileset dir="${src.dir}" includes="**" />
 			<fileset dir="${bin.dir}" includes="**" />
 		</jar>
 	</target>
 
-	<target name="compile" description="compile">
+	<target name="compile" depends="clean" description="compile">
 		<mkdir dir="${bin.dir}" />
-		<javac srcdir="${src.dir}" destdir="${bin.dir}" includeantruntime="false" classpathref="classpath" />
+		<javac srcdir="${src.dir}" destdir="${bin.dir}" includeantruntime="false" classpathref="classpath"/>
 	</target>
 
 	<target name="compile.test" depends="compile">
@@ -46,7 +48,7 @@
 		<javac srcdir="${test.src.dir}" destdir="${test.bin.dir}" includeantruntime="false" classpathref="test.classpath" />
 	</target>
 
-	<target name="clean">
+	<target name="clean" description="Clean">
         <if>
             <available file="${jar.path}" type="file" />
             <then>
@@ -84,7 +86,7 @@
 		<junit fork="yes">
 			<test name="${test.class.name}" />
 			<formatter type="plain" usefile="false" />
-<!--			<classpath refid="classpath" /> -->
+			<classpath refid="classpath" />
 			<classpath refid="test.classpath" />
 		</junit>
 	</target>

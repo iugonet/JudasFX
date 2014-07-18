@@ -1,5 +1,7 @@
 package org.iugonet.www;
 
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
 import java.net.URI;
 import java.beans.*;
 import java.io.*;

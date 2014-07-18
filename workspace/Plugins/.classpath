@@ -38,13 +38,12 @@
 	<classpathentry kind="src" path="src/SymIndex"/>
 	<classpathentry kind="src" path="src/Wdc"/>
 	<classpathentry kind="src" path="src/AeIndex"/>
-	<classpathentry kind="src" path="src/Cira86Ascii"/>
 	<classpathentry kind="src" path="src/ACE"/>
-	<classpathentry excluding="Eiscat/|ImagNipr/|Cira86Ascii/|GOES/|Mm210/|Lfrto/|HfTohokuu/|NoaaBi/|AeIndex/|WIND/|PoesTxt/|Wdc/|NoaaPower/|ACE/|SymIndex/|Iprt/|FmagNipr/|DstIndex/|MU/" kind="src" path="test/src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/Aplot.jar"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/jcommon-1.0.21.jar"/>
-	<classpathentry kind="lib" path="/home/iugonet/Judas/lib/external/jfreechart-1.0.17.jar"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/Aplot.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/Tplot.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/lombok.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
