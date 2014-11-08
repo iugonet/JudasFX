@@ -20,7 +20,7 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <GridPane prefHeight="477.0" prefWidth="798.0">
+                                    <GridPane prefHeight="477.0" prefWidth="798.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
                                        <children>
                                           <Label text="Data Selection:">
                                              <font>
@@ -48,6 +48,9 @@
                                                    <VBox.margin>
                                                       <Insets />
                                                    </VBox.margin>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
                                                 </Button>
                                                 <Button mnemonicParsing="false" GridPane.rowIndex="1">
                                                    <graphic>
@@ -60,140 +63,258 @@
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
                                                    </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
                                                 </Button>
                                              </children>
                                              <GridPane.margin>
                                                 <Insets left="5.0" top="150.0" />
                                              </GridPane.margin>
                                           </VBox>
-                                          <Button mnemonicParsing="false" text="Delete All Data" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font>
-                                             <graphic>
-                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@icons/folder16.png" />
-                                                   </image>
-                                                </ImageView>
-                                             </graphic>
-                                             <tooltip>
-                                                <Tooltip text="Empty Tooltip" />
-                                             </tooltip>
-                                          </Button>
-                                          <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0" GridPane.rowIndex="1">
-                                             <children>
-                                                <Label text="Start Time:" />
-                                                <Label text="Stop Time:" GridPane.rowIndex="1" />
-                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
-                                                   <children>
-                                                      <TextField GridPane.columnIndex="1" />
-                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" />
-                                                   </children>
-                                                </HBox>
-                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                                   <children>
-                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                   </children>
-                                                </HBox>
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Use Single Day" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                             </children>
-                                             <columnConstraints>
-                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="87.0" />
-                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="305.0" />
-                                             </columnConstraints>
-                                             <rowConstraints>
-                                                <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
-                                                <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                                <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                             </rowConstraints>
-                                          </GridPane>
                                           <Label text="Label" GridPane.rowIndex="1" />
                                           <ComboBox prefWidth="150.0" GridPane.rowIndex="1" />
-                                          <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                                           <GridPane GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="216.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="216.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="356.0" minHeight="10.0" prefHeight="326.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
                                              <children>
-                                                <Button mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                                   <font>
-                                                      <Font size="11.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                                         <image>
-                                                            <Image url="@icons/trash-empty16.png" />
-                                                         </image>
-                                                      </ImageView>
-                                                   </graphic>
-                                                </Button>
-                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                <ListView prefHeight="197.0" prefWidth="131.0" GridPane.rowIndex="1" />
-                                                <Label text="Level 1:" GridPane.columnIndex="1">
-                                                   <font>
-                                                      <Font size="11.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label text="All-Sky Ground Station:">
-                                                   <font>
-                                                      <Font size="11.0" />
-                                                   </font>
-                                                </Label>
-                                                <Button layoutX="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Clear" GridPane.rowIndex="2">
-                                                   <font>
-                                                      <Font size="11.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                                         <image>
-                                                            <Image url="@icons/trash-empty16.png" />
-                                                         </image>
-                                                      </ImageView>
-                                                   </graphic>
-                                                </Button>
-                                                <Label layoutX="141.0" layoutY="35.0" text="Level 2:" GridPane.columnIndex="2">
-                                                   <font>
-                                                      <Font size="11.0" />
-                                                   </font>
-                                                </Label>
-                                                <ListView layoutX="10.0" layoutY="74.0" prefHeight="197.0" prefWidth="131.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                                <Button mnemonicParsing="false" text="Check data availability" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                                   <tooltip>
-                                                      <Tooltip text="Check data availability" />
-                                                   </tooltip>
-                                                   <graphic>
-                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                                         <image>
-                                                            <Image url="@icons/done16.png" />
-                                                         </image>
-                                                      </ImageView>
-                                                   </graphic>
-                                                   <font>
-                                                      <Font size="11.0" />
-                                                   </font>
-                                                </Button>
+                                                <GridPane GridPane.rowIndex="2">
+                                                   <children>
+                                                      <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/cancel16.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <ListView prefHeight="197.0" prefWidth="131.0" GridPane.rowIndex="1" />
+                                                      <Label text="Level 1:" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Probes:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button layoutX="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Clear" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/cancel16.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Label layoutX="141.0" layoutY="35.0" text="Level 2:" GridPane.columnIndex="2">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ListView layoutX="10.0" layoutY="74.0" prefHeight="197.0" prefWidth="131.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" text="Check data availability" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                         <tooltip>
+                                                            <Tooltip text="Check data availability" />
+                                                         </tooltip>
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/done16.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" prefWidth="500.0" text="Clear" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/cancel16.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Label text="Start Time:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label disable="true" text="Stop Time:" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
+                                                         <children>
+                                                            <TextField GridPane.columnIndex="1">
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <Button mnemonicParsing="false" GridPane.columnIndex="1">
+                                                               <tooltip>
+                                                                  <Tooltip text="Empty Tooltip" />
+                                                               </tooltip>
+                                                               <graphic>
+                                                                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@icons/calendar-alt-1-16.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                            </Button>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <children>
+                                                            <TextField disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <Button disable="true" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                               <tooltip>
+                                                                  <Tooltip text="Empty Tooltip" />
+                                                               </tooltip>
+                                                               <graphic>
+                                                                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@icons/calendar-alt-1-16.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                            </Button>
+                                                         </children>
+                                                      </HBox>
+                                                      <CheckBox mnemonicParsing="false" selected="true" text="Use Single Day" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </CheckBox>
+                                                      <CheckBox mnemonicParsing="false" text="Uncalibrated/Raw?" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </CheckBox>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="107.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="145.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="165.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <GridPane>
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Instrument Type:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Output Coordinates:" GridPane.columnIndex="2">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" />
+                                                      <ChoiceBox prefWidth="150.0" GridPane.columnIndex="3" />
+                                                   </children>
+                                                </GridPane>
                                              </children>
-                                             <columnConstraints>
-                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                             </columnConstraints>
-                                             <rowConstraints>
-                                                <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
-                                                <RowConstraints maxHeight="300.0" minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
-                                                <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                                <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                             </rowConstraints>
+                                          </GridPane>
+                                          <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="7.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button mnemonicParsing="false" prefWidth="600.0" text="Delete All Data" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/folder16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </Button>
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                                             </children>
                                           </GridPane>
                                        </children>
                                        <columnConstraints>
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="40.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
                                        </columnConstraints>
                                        <rowConstraints>
-                                          <RowConstraints maxHeight="147.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
-                                          <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="443.0" vgrow="SOMETIMES" />
-                                          <RowConstraints maxHeight="398.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                        </rowConstraints>
                                     </GridPane>
                                  </children></AnchorPane>
@@ -212,52 +333,108 @@
                                              <children>
                                                 <GridPane layoutX="67.0" layoutY="86.0" prefHeight="424.0" prefWidth="796.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                   <columnConstraints>
-                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="361.0" minWidth="10.0" prefWidth="243.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="369.0" minWidth="10.0" prefWidth="369.0" />
                                                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                   </columnConstraints>
                                                   <rowConstraints>
-                                                    <RowConstraints maxHeight="380.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
-                                                    <RowConstraints maxHeight="361.0" minHeight="10.0" prefHeight="361.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                                   </rowConstraints>
                                                    <children>
-                                                      <Label text="Data Selection:">
-                                                         <font>
-                                                            <Font size="11.0" />
-                                                         </font></Label>
-                                                      <Label text="Variable Name:" GridPane.rowIndex="1">
-                                                         <font>
-                                                            <Font size="11.0" />
-                                                         </font></Label>
-                                                      <GridPane>
-                                                        <columnConstraints>
-                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                        </columnConstraints>
-                                                        <rowConstraints>
-                                                          <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
-                                                          <RowConstraints maxHeight="337.0" minHeight="10.0" prefHeight="337.0" vgrow="SOMETIMES" />
-                                                        </rowConstraints>
-                                                      </GridPane>
                                                       <GridPane GridPane.columnIndex="1">
                                                         <columnConstraints>
                                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                         </columnConstraints>
                                                         <rowConstraints>
-                                                          <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
-                                                            <RowConstraints maxHeight="157.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints maxHeight="123.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints maxHeight="201.0" minHeight="10.0" prefHeight="167.0" vgrow="SOMETIMES" />
                                                           <RowConstraints maxHeight="169.0" minHeight="10.0" prefHeight="169.0" vgrow="SOMETIMES" />
-                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                         </rowConstraints>
                                                          <children>
-                                                            <Label text="Energy Range:">
-                                                               <font>
-                                                                  <Font size="11.0" />
-                                                               </font></Label>
-                                                            <Label text="Angular distribution:" GridPane.rowIndex="2">
-                                                               <font>
-                                                                  <Font size="11.0" />
-                                                               </font></Label>
+                                                            <GridPane GridPane.rowIndex="1">
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints />
+                                                                  <ColumnConstraints />
+                                                               </columnConstraints>
+                                                               <children>
+                                                                  <Label text="Angular Ranges (min/max):" GridPane.columnIndex="1">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <Label text="Label" GridPane.rowIndex="1">
+                                                                           <font>
+                                                                              <Font size="11.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </GridPane>
+                                                            <GridPane>
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <Label text="Output Selection:">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font></Label>
+                                                               </children>
+                                                            </GridPane>
+                                                            <GridPane GridPane.rowIndex="2">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <Label text="Energy Range (min/max):">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <GridPane GridPane.rowIndex="1">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <Label text="Energy (eV):">
+                                                                           <font>
+                                                                              <Font size="11.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </GridPane>
                                                          </children>
                                                       </GridPane>
                                                       <GridPane GridPane.columnIndex="2">
@@ -265,14 +442,266 @@
                                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                         </columnConstraints>
                                                         <rowConstraints>
-                                                          <RowConstraints maxHeight="179.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
-                                                          <RowConstraints maxHeight="349.0" minHeight="10.0" prefHeight="349.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                         </rowConstraints>
                                                          <children>
-                                                            <Label text="Advanced:">
+                                                            <GridPane>
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                            </GridPane>
+                                                            <GridPane>
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <Label text="Variable Name:">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </GridPane>
+                                                            <GridPane GridPane.rowIndex="1">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <Label text="Field Aligned Coordinates:">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <GridPane GridPane.rowIndex="1">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <Label text="Bin Num (long, lat):" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </GridPane>
+                                                            <GridPane GridPane.rowIndex="2">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <Label text="SST Contamination:">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <CheckBox mnemonicParsing="false" text="Mask Default Bins" GridPane.rowIndex="1">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </CheckBox>
+                                                               </children>
+                                                            </GridPane>
+                                                            <GridPane GridPane.rowIndex="3">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <Label text="Phi/Gyro Start Agnle:">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </GridPane>
+                                                      <GridPane>
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints maxHeight="398.0" minHeight="10.0" prefHeight="384.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label text="Data Selection:">
                                                                <font>
                                                                   <Font size="11.0" />
-                                                               </font></Label>
+                                                               </font>
+                                                            </Label>
+                                                            <GridPane GridPane.rowIndex="1">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints maxHeight="256.0" minHeight="10.0" prefHeight="255.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0">
+                                                                     <children>
+                                                                        <Label text="Start Time:">
+                                                                           <font>
+                                                                              <Font size="11.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label disable="true" text="Stop Time:" GridPane.rowIndex="1">
+                                                                           <font>
+                                                                              <Font size="11.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
+                                                                           <children>
+                                                                              <TextField GridPane.columnIndex="1">
+                                                                                 <font>
+                                                                                    <Font size="11.0" />
+                                                                                 </font>
+                                                                              </TextField>
+                                                                              <Button mnemonicParsing="false" GridPane.columnIndex="1">
+                                                                                 <font>
+                                                                                    <Font size="11.0" />
+                                                                                 </font>
+                                                                                 <graphic>
+                                                                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                                       <image>
+                                                                                          <Image url="@icons/calendar-alt-1-16.png" />
+                                                                                       </image>
+                                                                                    </ImageView>
+                                                                                 </graphic>
+                                                                                 <tooltip>
+                                                                                    <Tooltip text="Empty Tooltip" />
+                                                                                 </tooltip>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </HBox>
+                                                                        <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                           <children>
+                                                                              <TextField disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                                 <font>
+                                                                                    <Font size="11.0" />
+                                                                                 </font>
+                                                                              </TextField>
+                                                                              <Button disable="true" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                                 <font>
+                                                                                    <Font size="11.0" />
+                                                                                 </font>
+                                                                                 <graphic>
+                                                                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                                       <image>
+                                                                                          <Image url="@icons/calendar-alt-1-16.png" />
+                                                                                       </image>
+                                                                                    </ImageView>
+                                                                                 </graphic>
+                                                                                 <tooltip>
+                                                                                    <Tooltip text="Empty Tooltip" />
+                                                                                 </tooltip>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </HBox>
+                                                                        <CheckBox mnemonicParsing="false" selected="true" text="Use Single Day" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                                           <font>
+                                                                              <Font size="11.0" />
+                                                                           </font>
+                                                                        </CheckBox>
+                                                                     </children>
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="72.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="208.0" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                     </rowConstraints>
+                                                                  </GridPane>
+                                                                  <CheckBox mnemonicParsing="false" text="Use Beta SST Calibrations?" GridPane.rowIndex="1">
+                                                                     <font>
+                                                                        <Font size="11.0" />
+                                                                     </font></CheckBox>
+                                                                  <GridPane GridPane.rowIndex="2">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <Label text="Probe:">
+                                                                           <font>
+                                                                              <Font size="11.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label text="Data Type:" GridPane.columnIndex="1">
+                                                                           <font>
+                                                                              <Font size="11.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                                                                        <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Button mnemonicParsing="false" prefWidth="200.0" text="Clear" GridPane.rowIndex="2">
+                                                                           <font>
+                                                                              <Font size="11.0" />
+                                                                           </font>
+                                                                           <tooltip>
+                                                                              <Tooltip text="Empty Tooltip" />
+                                                                           </tooltip>
+                                                                           <graphic>
+                                                                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@icons/cancel16.png" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </graphic>
+                                                                        </Button>
+                                                                        <Button mnemonicParsing="false" prefWidth="200.0" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                                           <font>
+                                                                              <Font size="11.0" />
+                                                                           </font>
+                                                                           <tooltip>
+                                                                              <Tooltip text="Empty Tooltip" />
+                                                                           </tooltip>
+                                                                           <graphic>
+                                                                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@icons/cancel16.png" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </graphic>
+                                                                        </Button>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </GridPane>
                                                          </children>
                                                       </GridPane>
                                                    </children>
@@ -287,7 +716,7 @@
                                                          <graphic>
                                                             <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                                <image>
-                                                                  <Image url="@icons/trash-empty16.png" />
+                                                                  <Image url="@icons/done16.png" />
                                                                </image></ImageView>
                                                          </graphic>
                                                          <tooltip>
@@ -300,7 +729,7 @@
                                                          <graphic>
                                                             <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                                <image>
-                                                                  <Image url="@icons/trash-empty16.png" />
+                                                                  <Image url="@icons/cancel16.png" />
                                                                </image></ImageView>
                                                          </graphic>
                                                          <tooltip>
@@ -313,7 +742,7 @@
                                                          <graphic>
                                                             <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                                <image>
-                                                                  <Image url="@icons/trash-empty16.png" />
+                                                                  <Image url="@icons/help16.png" />
                                                                </image></ImageView>
                                                          </graphic>
                                                          <tooltip>
@@ -341,14 +770,14 @@
                                  <children>
                                     <GridPane layoutX="58.0" layoutY="105.0" prefHeight="477.0" prefWidth="798.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
                                       <columnConstraints>
-                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
-                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="40.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" />
                                       </columnConstraints>
                                       <rowConstraints>
-                                        <RowConstraints maxHeight="147.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
-                                        <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="443.0" vgrow="SOMETIMES" />
-                                        <RowConstraints maxHeight="398.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
                                           <Label text="GOES Data Selection:">
@@ -370,7 +799,10 @@
                                                    </graphic>
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
-                                                   </tooltip></Button>
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Button>
                                                 <Button mnemonicParsing="false" GridPane.rowIndex="1">
                                                    <graphic>
                                                       <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
@@ -380,25 +812,15 @@
                                                    </graphic>
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
-                                                   </tooltip></Button>
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Button>
                                              </children>
                                              <GridPane.margin>
                                                 <Insets left="5.0" top="150.0" />
                                              </GridPane.margin>
                                           </VBox>
-                                          <Button mnemonicParsing="false" text="Delete All Data" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                             <graphic>
-                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@icons/folder16.png" />
-                                                   </image></ImageView>
-                                             </graphic>
-                                             <tooltip>
-                                                <Tooltip text="Empty Tooltip" />
-                                             </tooltip>
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Button>
                                           <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0" GridPane.rowIndex="1">
                                             <columnConstraints>
                                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="87.0" />
@@ -429,23 +851,22 @@
                                           </GridPane>
                                           <Label text="Label" GridPane.rowIndex="1" />
                                           <ComboBox prefWidth="150.0" GridPane.rowIndex="1" />
-                                          <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                                           <GridPane GridPane.rowIndex="1">
                                             <columnConstraints>
                                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                             </columnConstraints>
                                             <rowConstraints>
-                                              <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
-                                              <RowConstraints maxHeight="300.0" minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
-                                              <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Button mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                    <graphic>
                                                       <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@icons/trash-empty16.png" />
+                                                            <Image url="@icons/cancel16.png" />
                                                          </image></ImageView>
                                                    </graphic>
                                                    <font>
@@ -461,16 +882,47 @@
                                                    <font>
                                                       <Font size="11.0" />
                                                    </font></Label>
-                                                <Button layoutX="100.0" mnemonicParsing="false" text="Clear" GridPane.rowIndex="2">
+                                                <Button layoutX="100.0" maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Clear" GridPane.rowIndex="2">
                                                    <graphic>
                                                       <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@icons/trash-empty16.png" />
+                                                            <Image url="@icons/cancel16.png" />
                                                          </image></ImageView>
                                                    </graphic>
                                                    <font>
                                                       <Font size="11.0" />
-                                                   </font></Button>
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin></Button>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Delete All Data" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Button>
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
                                              </children>
                                           </GridPane>
                                        </children>
@@ -488,17 +940,167 @@
                                     <GridPane layoutX="58.0" layoutY="105.0" prefHeight="477.0" prefWidth="798.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
                                       <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="40.0" />
                                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
                                       </columnConstraints>
                                       <rowConstraints>
-                                          <RowConstraints maxHeight="59.0" minHeight="39.0" prefHeight="59.0" />
-                                        <RowConstraints maxHeight="59.0" minHeight="39.0" prefHeight="59.0" />
-                                        <RowConstraints maxHeight="391.0" minHeight="6.0" prefHeight="346.0" vgrow="SOMETIMES" />
-                                        <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
-                                          <AnchorPane maxHeight="600.0" maxWidth="800.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                          <GridPane GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <GridPane GridPane.rowIndex="2">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Button maxWidth="300.0" mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/cancel16.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </GridPane.margin>
+                                                      </Button>
+                                                      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                      </ListView>
+                                                      <ListView prefHeight="197.0" prefWidth="131.0" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                      </ListView>
+                                                      <Label text="Parameter(s):" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Data Type:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font></Label>
+                                                   </children>
+                                                </GridPane>
+                                                <GridPane GridPane.rowIndex="1">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Instrument Type:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ComboBox prefWidth="150.0" GridPane.columnIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                      </ComboBox>
+                                                   </children>
+                                                </GridPane>
+                                                <GridPane>
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints />
+                                                      <ColumnConstraints />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Start Time:">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font></Label>
+                                                      <Button mnemonicParsing="false" GridPane.columnIndex="2">
+                                                         <graphic>
+                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/calendar-alt-1-16.png" />
+                                                               </image></ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font></Button>
+                                                      <Button mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                         <graphic>
+                                                            <ImageView disable="true" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@icons/calendar-alt-1-16.png" />
+                                                               </image></ImageView>
+                                                         </graphic>
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font></Button>
+                                                      <TextField GridPane.columnIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font></TextField>
+                                                      <Label disable="true" text="Stop Time:" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <CheckBox mnemonicParsing="false" selected="true" text="Use Single Day" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </CheckBox>
+                                                      <TextField disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <tooltip>
+                                                            <Tooltip text="Empty Tooltip" />
+                                                         </tooltip>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font></TextField>
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </GridPane>
+                                          <AnchorPane maxHeight="600.0" maxWidth="800.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                              <children>
                                                 <VBox spacing="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="150.0">
                                                    <children>
@@ -516,6 +1118,9 @@
                                                          <VBox.margin>
                                                             <Insets />
                                                          </VBox.margin>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
                                                       </Button>
                                                       <Button mnemonicParsing="false" GridPane.rowIndex="1">
                                                          <graphic>
@@ -528,128 +1133,26 @@
                                                          <tooltip>
                                                             <Tooltip text="Empty Tooltip" />
                                                          </tooltip>
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
                                                       </Button>
                                                    </children>
                                                 </VBox>
                                              </children>
                                           </AnchorPane>
-                                          <Label text="IUGONET Data Selection:" GridPane.rowIndex="2" />
-                                          <Label text="Data Loaded:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                          <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0" GridPane.rowIndex="2">
-                                            <columnConstraints>
-                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="87.0" />
-                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="305.0" />
-                                            </columnConstraints>
-                                            <rowConstraints>
-                                              <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
-                                              <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                                <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                            </rowConstraints>
-                                             <children>
-                                                <Label text="Start Time:" />
-                                                <Label text="Stop Time:" GridPane.rowIndex="1" />
-                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
-                                                   <children>
-                                                      <TextField GridPane.columnIndex="1">
-                                                         <tooltip>
-                                                            <Tooltip text="Empty Tooltip" />
-                                                         </tooltip></TextField>
-                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1">
-                                                         <graphic>
-                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
-                                                         </graphic>
-                                                         <tooltip>
-                                                            <Tooltip text="Empty Tooltip" />
-                                                         </tooltip></Button>
-                                                   </children>
-                                                </HBox>
-                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                                   <children>
-                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                                         <tooltip>
-                                                            <Tooltip text="Empty Tooltip" />
-                                                         </tooltip></TextField>
-                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                                         <graphic>
-                                                            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
-                                                         </graphic>
-                                                         <tooltip>
-                                                            <Tooltip text="Empty Tooltip" />
-                                                         </tooltip></Button>
-                                                   </children>
-                                                </HBox>
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Use Single Day" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                             </children>
-                                          </GridPane>
-                                          <Label text="Label" GridPane.rowIndex="2" />
-                                          <ComboBox prefWidth="150.0" GridPane.rowIndex="2">
-                                             <tooltip>
-                                                <Tooltip text="Empty Tooltip" />
-                                             </tooltip></ComboBox>
-                                          <GridPane GridPane.rowIndex="2">
-                                            <columnConstraints>
-                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                            </columnConstraints>
-                                            <rowConstraints>
-                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                            </rowConstraints>
-                                             <children>
-                                                <Button maxWidth="300.0" mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                                   <graphic>
-                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                                         <image>
-                                                            <Image url="@icons/activity16.png" />
-                                                         </image></ImageView>
-                                                   </graphic>
-                                                   <tooltip>
-                                                      <Tooltip text="Empty Tooltip" />
-                                                   </tooltip>
-                                                   <font>
-                                                      <Font size="11.0" />
-                                                   </font>
-                                                   <GridPane.margin>
-                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                   </GridPane.margin></Button>
-                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                                   <tooltip>
-                                                      <Tooltip text="Empty Tooltip" />
-                                                   </tooltip></ListView>
-                                                <ListView prefHeight="197.0" prefWidth="131.0" GridPane.rowIndex="1">
-                                                   <tooltip>
-                                                      <Tooltip text="Empty Tooltip" />
-                                                   </tooltip></ListView>
-                                                <Label text="Parameter(s):" GridPane.columnIndex="1">
-                                                   <font>
-                                                      <Font size="11.0" />
-                                                   </font></Label>
-                                                <Label text="Data Type:" />
-                                                <ComboBox prefWidth="150.0">
-                                                   <tooltip>
-                                                      <Tooltip text="Empty Tooltip" />
-                                                   </tooltip></ComboBox>
-                                                <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="1">
-                                                   <font>
-                                                      <Font size="11.0" />
-                                                   </font></CheckBox>
-                                             </children>
-                                          </GridPane>
-                                          <Label text="Instrument Type:" GridPane.rowIndex="1">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Label>
-                                          <GridPane GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                          <Label text="Data Loaded:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                          <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
                                             <columnConstraints>
                                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                             </columnConstraints>
                                             <rowConstraints>
-                                              <RowConstraints maxHeight="351.0" minHeight="10.0" prefHeight="338.0" vgrow="SOMETIMES" />
-                                              <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Button mnemonicParsing="false" text="Delete All Data" GridPane.rowIndex="1">
+                                                <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Delete All Data" GridPane.rowIndex="2">
                                                    <graphic>
                                                       <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -664,14 +1167,17 @@
                                                       <Font size="11.0" />
                                                    </font>
                                                 </Button>
-                                                <ListView prefHeight="200.0" prefWidth="200.0">
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
                                                    </tooltip>
                                                 </ListView>
                                              </children>
                                           </GridPane>
-                                          <Label text="WIND Data Selection:" />
+                                          <Label text="WIND Data Selection:">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
                                        </children>
                                     </GridPane>
                                  </children></AnchorPane>
@@ -687,13 +1193,13 @@
                                     <GridPane layoutX="58.0" layoutY="105.0" prefHeight="477.0" prefWidth="798.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
                                       <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="40.0" />
                                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
                                       </columnConstraints>
                                       <rowConstraints>
-                                        <RowConstraints maxHeight="147.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
-                                        <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="443.0" vgrow="SOMETIMES" />
-                                        <RowConstraints maxHeight="398.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
                                           <Label text="ACE Data Selection:">
@@ -718,7 +1224,10 @@
                                                    </tooltip>
                                                    <VBox.margin>
                                                       <Insets />
-                                                   </VBox.margin></Button>
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Button>
                                                 <Button mnemonicParsing="false" GridPane.rowIndex="1">
                                                    <graphic>
                                                       <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
@@ -728,25 +1237,15 @@
                                                    </graphic>
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
-                                                   </tooltip></Button>
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Button>
                                              </children>
                                              <GridPane.margin>
                                                 <Insets left="5.0" top="150.0" />
                                              </GridPane.margin>
                                           </VBox>
-                                          <Button mnemonicParsing="false" text="Delete All Data" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                             <graphic>
-                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@icons/trash-empty16.png" />
-                                                   </image></ImageView>
-                                             </graphic>
-                                             <tooltip>
-                                                <Tooltip text="Empty Tooltip" />
-                                             </tooltip>
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Button>
                                           <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0" GridPane.rowIndex="1">
                                             <columnConstraints>
                                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="87.0" />
@@ -792,26 +1291,22 @@
                                              <tooltip>
                                                 <Tooltip text="Empty Tooltip" />
                                              </tooltip></ComboBox>
-                                          <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                             <tooltip>
-                                                <Tooltip text="Empty Tooltip" />
-                                             </tooltip></ListView>
                                           <GridPane GridPane.rowIndex="1">
                                             <columnConstraints>
                                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                             </columnConstraints>
                                             <rowConstraints>
-                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Button mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                    <graphic>
                                                       <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@icons/keyboard16.png" />
+                                                            <Image url="@icons/cancel16.png" />
                                                          </image></ImageView>
                                                    </graphic>
                                                    <tooltip>
@@ -834,7 +1329,7 @@
                                                    </font></Label>
                                                 <Label text="Data Type:" />
                                                 <Label text="Instrument Type:" />
-                                                <ComboBox prefWidth="150.0">
+                                                <ComboBox maxWidth="300.0" prefWidth="300.0">
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
                                                    </tooltip></ComboBox>
@@ -842,6 +1337,38 @@
                                                    <font>
                                                       <Font size="11.0" />
                                                    </font></CheckBox>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Delete All Data" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Button>
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </ListView>
                                              </children>
                                           </GridPane>
                                        </children>
@@ -856,7 +1383,7 @@
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <GridPane prefHeight="477.0" prefWidth="798.0">
+                                    <GridPane prefHeight="477.0" prefWidth="798.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="5.0">
                                        <children>
                                           <Label text="FAST Data Selection:">
                                              <font>
@@ -881,6 +1408,9 @@
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
                                                    </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
                                                 </Button>
                                                 <Button mnemonicParsing="false" GridPane.rowIndex="1">
                                                    <graphic>
@@ -893,27 +1423,15 @@
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
                                                    </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
                                                 </Button>
                                              </children>
                                              <GridPane.margin>
                                                 <Insets left="5.0" top="150.0" />
                                              </GridPane.margin>
                                           </VBox>
-                                          <Button mnemonicParsing="false" text="Delete All Data" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font>
-                                             <graphic>
-                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@icons/trash-empty16.png" />
-                                                   </image>
-                                                </ImageView>
-                                             </graphic>
-                                             <tooltip>
-                                                <Tooltip text="Empty Tooltip" />
-                                             </tooltip>
-                                          </Button>
                                           <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0" GridPane.rowIndex="1">
                                              <children>
                                                 <Label text="Start Time:" />
@@ -948,21 +1466,16 @@
                                                 <Tooltip text="Empty Tooltip" />
                                              </tooltip>
                                           </ComboBox>
-                                          <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                             <tooltip>
-                                                <Tooltip text="Empty Tooltip" />
-                                             </tooltip>
-                                          </ListView>
                                           <GridPane GridPane.rowIndex="1">
                                              <children>
-                                                <Button mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font size="11.0" />
                                                    </font>
                                                    <graphic>
                                                       <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@icons/settings16.png" />
+                                                            <Image url="@icons/cancel16.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -990,20 +1503,23 @@
                                                       <Font size="11.0" />
                                                    </font>
                                                 </Label>
-                                                <Button mnemonicParsing="false" text="Clear" GridPane.rowIndex="2">
+                                                <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Clear" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font size="11.0" />
                                                    </font>
                                                    <graphic>
                                                       <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@icons/settings16.png" />
+                                                            <Image url="@icons/cancel16.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
                                                    </tooltip>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
                                                 </Button>
                                              </children>
                                              <columnConstraints>
@@ -1011,21 +1527,53 @@
                                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                              </columnConstraints>
                                              <rowConstraints>
-                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                              </rowConstraints>
+                                          </GridPane>
+                                          <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Delete All Data" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </Button>
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </ListView>
+                                             </children>
                                           </GridPane>
                                        </children>
                                        <columnConstraints>
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="40.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
                                        </columnConstraints>
                                        <rowConstraints>
-                                          <RowConstraints maxHeight="147.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
-                                          <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="443.0" vgrow="SOMETIMES" />
-                                          <RowConstraints maxHeight="398.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="30.0" minHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                        </rowConstraints>
                                     </GridPane>
                                  </children>
@@ -1042,13 +1590,13 @@
                                     <GridPane layoutX="58.0" layoutY="105.0" prefHeight="477.0" prefWidth="798.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
                                       <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="40.0" />
                                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
                                       </columnConstraints>
                                       <rowConstraints>
-                                        <RowConstraints maxHeight="147.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
-                                        <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="443.0" vgrow="SOMETIMES" />
-                                        <RowConstraints maxHeight="398.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="30.0" minHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
                                           <Label text="IUGONET Data Selection:">
@@ -1070,7 +1618,10 @@
                                                    </graphic>
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
-                                                   </tooltip></Button>
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Button>
                                                 <Button mnemonicParsing="false" GridPane.rowIndex="1">
                                                    <graphic>
                                                       <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
@@ -1080,25 +1631,15 @@
                                                    </graphic>
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
-                                                   </tooltip></Button>
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Button>
                                              </children>
                                              <GridPane.margin>
                                                 <Insets left="5.0" top="150.0" />
                                              </GridPane.margin>
                                           </VBox>
-                                          <Button mnemonicParsing="false" text="Delete All Data" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                             <graphic>
-                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@icons/trash-empty16.png" />
-                                                   </image></ImageView>
-                                             </graphic>
-                                             <tooltip>
-                                                <Tooltip text="Empty Tooltip" />
-                                             </tooltip>
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Button>
                                           <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0" GridPane.rowIndex="1">
                                             <columnConstraints>
                                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="87.0" />
@@ -1144,10 +1685,6 @@
                                              <tooltip>
                                                 <Tooltip text="Empty Tooltip" />
                                              </tooltip></ComboBox>
-                                          <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                             <tooltip>
-                                                <Tooltip text="Empty Tooltip" />
-                                             </tooltip></ListView>
                                           <GridPane GridPane.rowIndex="1">
                                             <columnConstraints>
                                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -1155,16 +1692,16 @@
                                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                             </columnConstraints>
                                             <rowConstraints>
-                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Button mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                    <graphic>
                                                       <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@icons/copy16.png" />
+                                                            <Image url="@icons/cancel16.png" />
                                                          </image></ImageView>
                                                    </graphic>
                                                    <tooltip>
@@ -1173,11 +1710,11 @@
                                                    <font>
                                                       <Font size="11.0" />
                                                    </font></Button>
-                                                <Button mnemonicParsing="false" text="Clear" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Clear" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                                    <graphic>
                                                       <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@icons/calendar-alt-1-16.png" />
+                                                            <Image url="@icons/cancel16.png" />
                                                          </image></ImageView>
                                                    </graphic>
                                                    <tooltip>
@@ -1212,6 +1749,38 @@
                                                    </font></Label>
                                              </children>
                                           </GridPane>
+                                          <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Delete All Data" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Button>
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </ListView>
+                                             </children>
+                                          </GridPane>
                                        </children>
                                     </GridPane>
                                  </children></AnchorPane>
@@ -1227,13 +1796,13 @@
                                     <GridPane layoutX="58.0" layoutY="105.0" prefHeight="477.0" prefWidth="798.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
                                       <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="40.0" />
                                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
                                       </columnConstraints>
                                       <rowConstraints>
-                                        <RowConstraints maxHeight="147.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
-                                        <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="443.0" vgrow="SOMETIMES" />
-                                        <RowConstraints maxHeight="398.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="30.0" minHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
                                           <Label text="OMNI Data Selection:">
@@ -1255,7 +1824,10 @@
                                                    </graphic>
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
-                                                   </tooltip></Button>
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Button>
                                                 <Button mnemonicParsing="false" GridPane.rowIndex="1">
                                                    <graphic>
                                                       <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
@@ -1265,25 +1837,15 @@
                                                    </graphic>
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
-                                                   </tooltip></Button>
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Button>
                                              </children>
                                              <GridPane.margin>
                                                 <Insets left="5.0" top="150.0" />
                                              </GridPane.margin>
                                           </VBox>
-                                          <Button mnemonicParsing="false" text="Delete All Data" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                             <graphic>
-                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@icons/trash-empty16.png" />
-                                                   </image></ImageView>
-                                             </graphic>
-                                             <tooltip>
-                                                <Tooltip text="Empty Tooltip" />
-                                             </tooltip>
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Button>
                                           <GridPane maxHeight="-Infinity" prefHeight="87.0" prefWidth="392.0" GridPane.rowIndex="1">
                                             <columnConstraints>
                                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="87.0" />
@@ -1317,26 +1879,22 @@
                                              <tooltip>
                                                 <Tooltip text="Empty Tooltip" />
                                              </tooltip></ComboBox>
-                                          <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                             <tooltip>
-                                                <Tooltip text="Empty Tooltip" />
-                                             </tooltip></ListView>
                                           <GridPane GridPane.rowIndex="1">
                                             <columnConstraints>
                                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                             </columnConstraints>
                                             <rowConstraints>
-                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Button mnemonicParsing="false" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                    <graphic>
                                                       <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@icons/settings16.png" />
+                                                            <Image url="@icons/cancel16.png" />
                                                          </image></ImageView>
                                                    </graphic>
                                                    <tooltip>
@@ -1361,11 +1919,11 @@
                                                    <font>
                                                       <Font size="11.0" />
                                                    </font></Label>
-                                                <Button mnemonicParsing="false" text="Clear" GridPane.rowIndex="2">
+                                                <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Clear" GridPane.rowIndex="2">
                                                    <graphic>
                                                       <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@icons/settings16.png" />
+                                                            <Image url="@icons/cancel16.png" />
                                                          </image></ImageView>
                                                    </graphic>
                                                    <tooltip>
@@ -1374,6 +1932,38 @@
                                                    <font>
                                                       <Font size="11.0" />
                                                    </font></Button>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                </ListView>
+                                                <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Delete All Data" GridPane.rowIndex="2">
+                                                   <graphic>
+                                                      <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/trash-empty16.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="Empty Tooltip" />
+                                                   </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Button>
                                              </children>
                                           </GridPane>
                                        </children>
@@ -1405,15 +1995,24 @@
                                                          <font>
                                                             <Font size="11.0" />
                                                          </font>
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
                                                       </Label>
                                                       <Label disable="true" text="Stop Time:" GridPane.rowIndex="1">
                                                          <font>
                                                             <Font size="11.0" />
                                                          </font>
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
                                                       </Label>
                                                       <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
                                                          <children>
-                                                            <TextField GridPane.columnIndex="1" />
+                                                            <TextField GridPane.columnIndex="1">
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font></TextField>
                                                             <Button mnemonicParsing="false" GridPane.columnIndex="1">
                                                                <font>
                                                                   <Font size="11.0" />
@@ -1430,7 +2029,10 @@
                                                       </HBox>
                                                       <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                          <children>
-                                                            <TextField disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <TextField disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font></TextField>
                                                             <Button disable="true" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                                <font>
                                                                   <Font size="11.0" />
@@ -1452,13 +2054,13 @@
                                                       </CheckBox>
                                                    </children>
                                                    <columnConstraints>
-                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="87.0" />
-                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="305.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="128.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="260.0" />
                                                    </columnConstraints>
                                                    <rowConstraints>
-                                                      <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
-                                                      <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                                      <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                    </rowConstraints>
                                                 </GridPane>
                                                 <GridPane GridPane.rowIndex="1">
@@ -1470,7 +2072,7 @@
                                                          <graphic>
                                                             <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                                <image>
-                                                                  <Image url="@icons/settings16.png" />
+                                                                  <Image url="@icons/cancel16.png" />
                                                                </image>
                                                             </ImageView>
                                                          </graphic>
@@ -1492,11 +2094,17 @@
                                                          <font>
                                                             <Font size="11.0" />
                                                          </font>
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
                                                       </Label>
                                                       <Label text="Index:">
                                                          <font>
                                                             <Font size="11.0" />
                                                          </font>
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
                                                       </Label>
                                                       <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Clear" GridPane.rowIndex="2">
                                                          <font>
@@ -1505,7 +2113,7 @@
                                                          <graphic>
                                                             <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                                <image>
-                                                                  <Image url="@icons/settings16.png" />
+                                                                  <Image url="@icons/cancel16.png" />
                                                                </image>
                                                             </ImageView>
                                                          </graphic>
@@ -1518,7 +2126,7 @@
                                                             <Tooltip text="Empty Tooltip" />
                                                          </tooltip>
                                                       </ListView>
-                                                      <Label text="Resolution:l" GridPane.columnIndex="2" />
+                                                      <Label text="Resolution:" GridPane.columnIndex="2" />
                                                       <Button layoutX="141.0" layoutY="305.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Clear" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                                          <font>
                                                             <Font size="11.0" />
@@ -1526,7 +2134,7 @@
                                                          <graphic>
                                                             <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                                                <image>
-                                                                  <Image url="@icons/settings16.png" />
+                                                                  <Image url="@icons/cancel16.png" />
                                                                </image>
                                                             </ImageView>
                                                          </graphic>
@@ -1541,10 +2149,13 @@
                                                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                    </columnConstraints>
                                                    <rowConstraints>
-                                                      <RowConstraints maxHeight="104.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
-                                                      <RowConstraints maxHeight="239.0" minHeight="10.0" prefHeight="239.0" vgrow="SOMETIMES" />
-                                                      <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                    </rowConstraints>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
                                                 </GridPane>
                                              </children>
                                           </GridPane>
@@ -1552,6 +2163,9 @@
                                              <font>
                                                 <Font size="11.0" />
                                              </font>
+                                             <GridPane.margin>
+                                                <Insets />
+                                             </GridPane.margin>
                                           </Label>
                                           <Label text="Data Loaded:" GridPane.columnIndex="2">
                                              <font>
@@ -1571,6 +2185,9 @@
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
                                                    </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
                                                 </Button>
                                                 <Button mnemonicParsing="false" GridPane.rowIndex="1">
                                                    <graphic>
@@ -1583,6 +2200,9 @@
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
                                                    </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
                                                 </Button>
                                              </children>
                                              <GridPane.margin>
@@ -1599,16 +2219,17 @@
                                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                             </columnConstraints>
                                             <rowConstraints>
-                                              <RowConstraints maxHeight="435.0" minHeight="10.0" prefHeight="402.0" vgrow="SOMETIMES" />
-                                              <RowConstraints maxHeight="210.0" minHeight="8.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="8.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <ListView prefHeight="200.0" prefWidth="200.0">
+                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                                                    <tooltip>
                                                       <Tooltip text="Empty Tooltip" />
                                                    </tooltip>
                                                 </ListView>
-                                                <Button mnemonicParsing="false" text="Delete All Data" GridPane.rowIndex="1">
+                                                <Button maxWidth="600.0" mnemonicParsing="false" prefWidth="600.0" text="Delete All Data" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font size="11.0" />
                                                    </font>
@@ -1624,18 +2245,24 @@
                                                    </tooltip>
                                                 </Button>
                                              </children>
+                                             <GridPane.margin>
+                                                <Insets />
+                                             </GridPane.margin>
                                           </GridPane>
                                        </children>
                                        <columnConstraints>
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="54.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="40.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
                                        </columnConstraints>
                                        <rowConstraints>
-                                          <RowConstraints maxHeight="147.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
-                                          <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="443.0" vgrow="SOMETIMES" />
-                                          <RowConstraints maxHeight="398.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                        </rowConstraints>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
                                     </GridPane>
                                  </children>
                               </AnchorPane>
@@ -1648,7 +2275,7 @@
                   </TabPane>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="30.0">
                <children>
                   <Button fx:id="btnDone" mnemonicParsing="false" onAction="#handleDone" text="Done" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
                      <graphic>

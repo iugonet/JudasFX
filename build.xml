@@ -144,6 +144,8 @@
     <copy file="${tmp}/${jyconsole_prefix}/thirdpart/ArtTk/ArtTk.jar" todir="${ext.dir}" />
     <copy file="${tmp}/${jyconsole_prefix}/thirdpart/jython2.2/jython.jar" todir="${ext.dir}" />
     <!-- -->
+    <!-- JyNI --> 
+    <!-- -->
     <get src="${src_java_getopt}" dest="${dst_java_getopt}" usetimestamp="yes" />
     <copy file="${tmp}/${java_getopt}" todir="${ext.dir}" />
     <!-- -->

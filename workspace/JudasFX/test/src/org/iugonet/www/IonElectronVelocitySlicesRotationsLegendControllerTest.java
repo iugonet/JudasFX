@@ -10,7 +10,7 @@ import org.loadui.testfx.GuiTest;
 
 public class IonElectronVelocitySlicesRotationsLegendControllerTest extends GuiTest {
 
-	IonElectronVelocitySlicesRotationsLegendController ionElectronVelocitySlicesRotationsLegendController;
+	ParticleDistributionSlicesController ionElectronVelocitySlicesRotationsLegendController;
 
 	@Override
 	protected Parent getRootNode() {
@@ -20,7 +20,7 @@ public class IonElectronVelocitySlicesRotationsLegendControllerTest extends GuiT
 	
 	@Before
 	public void setUp() throws Exception {
-		ionElectronVelocitySlicesRotationsLegendController = new IonElectronVelocitySlicesRotationsLegendController();
+		ionElectronVelocitySlicesRotationsLegendController = new ParticleDistributionSlicesController();
 	}
 
 	@After

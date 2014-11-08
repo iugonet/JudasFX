@@ -20,13 +20,13 @@
                            <children>
                               <GridPane layoutX="1.0" layoutY="2.0" prefHeight="554.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columnConstraints>
-                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="100.0" prefWidth="290.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="100.0" prefWidth="290.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="40.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" />
                                 </columnConstraints>
                                 <rowConstraints>
-                                  <RowConstraints maxHeight="158.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
-                                  <RowConstraints maxHeight="530.0" minHeight="10.0" prefHeight="513.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
                                     <Label text="Loaded Data">
@@ -47,7 +47,7 @@
                                        </tooltip></ListView>
                                     <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <children>
-                                          <VBox spacing="5.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="200.0">
+                                          <VBox spacing="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="200.0">
                                              <children>
                                                 <Button fx:id="btnRightArrow" mnemonicParsing="false" onAction="#handleRightArrow" prefHeight="16.0" prefWidth="16.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                    <graphic>
@@ -60,6 +60,9 @@
                                                    <tooltip>
                                                       <Tooltip text="Set selected data to active" />
                                                    </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
                                                 </Button>
                                                 <Button fx:id="btnLeftArrow" mnemonicParsing="false" onAction="#handleLeftArrow" prefHeight="16.0" prefWidth="16.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                    <graphic>
@@ -72,6 +75,9 @@
                                                    <tooltip>
                                                       <Tooltip text="Unset selected data from active" />
                                                    </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
                                                 </Button>
                                                 <Button fx:id="btnTrash" mnemonicParsing="false" onAction="#handleTrash" prefHeight="16.0" prefWidth="16.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                    <graphic>
@@ -84,6 +90,9 @@
                                                    <tooltip>
                                                       <Tooltip text="Delete data selected in the list of loaded data" />
                                                    </tooltip>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
                                                 </Button>
                                              </children>
                                           </VBox>

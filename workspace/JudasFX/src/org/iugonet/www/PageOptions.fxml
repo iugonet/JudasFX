@@ -74,8 +74,14 @@
                                                             <Font size="11.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                                      <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                      <TextField GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font></TextField>
+                                                      <TextField GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font></TextField>
                                                       <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                                          <graphic>
                                                             <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
@@ -121,7 +127,10 @@
                                                       <Font size="11.0" />
                                                    </font>
                                                 </Label>
-                                                <TextField GridPane.columnIndex="1" />
+                                                <TextField GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></TextField>
                                                 <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.columnIndex="2">
                                                    <font>
                                                       <Font size="11.0" />
@@ -132,7 +141,10 @@
                                                       <Font size="11.0" />
                                                    </font>
                                                 </CheckBox>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></TextField>
                                                 <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                   <columnConstraints>
                                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

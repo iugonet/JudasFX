@@ -505,6 +505,9 @@
                                              <tooltip>
                                                 <Tooltip text="Down" />
                                              </tooltip>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
                                           </Button>
                                           <Button fx:id="btnUp" mnemonicParsing="false" onAction="#handleUp">
                                              <graphic>
@@ -517,6 +520,9 @@
                                              <tooltip>
                                                 <Tooltip text="Up" />
                                              </tooltip>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
                                           </Button>
                                           <Button fx:id="btnUp1" layoutX="36.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleUp">
                                              <graphic>
@@ -529,6 +535,9 @@
                                              <tooltip>
                                                 <Tooltip text="Reduces X range by major tick mark" />
                                              </tooltip>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
                                           </Button>
                                           <Button fx:id="btnUp11" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleUp">
                                              <graphic>
@@ -541,6 +550,9 @@
                                              <tooltip>
                                                 <Tooltip text="Expands X range by major tick mark" />
                                              </tooltip>
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
                                           </Button>
                                        </children>
                                     </HBox>

@@ -97,7 +97,7 @@
                                           <Tooltip text="Empty Tooltip" />
                                        </tooltip>
                                     </TextField>
-                                    <CheckBox mnemonicParsing="false" text="Use Single Day" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <CheckBox mnemonicParsing="false" selected="true" text="Use Single Day" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                        <font>
                                           <Font size="11.0" />
                                        </font></CheckBox>

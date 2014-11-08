@@ -61,7 +61,10 @@
                               <TextField>
                                  <tooltip>
                                     <Tooltip text="Empty Tooltip" />
-                                 </tooltip></TextField>
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font></TextField>
                               <VBox>
                                  <children>
                                     <Button mnemonicParsing="false" text="Button">
@@ -131,7 +134,10 @@
                                     <TextField GridPane.columnIndex="2" GridPane.rowIndex="1">
                                        <tooltip>
                                           <Tooltip text="Empty Tooltip" />
-                                       </tooltip></TextField>
+                                       </tooltip>
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font></TextField>
                                     <Button mnemonicParsing="false" text="Button">
                                        <graphic>
                                           <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
@@ -179,7 +185,10 @@
                               <TextField>
                                  <tooltip>
                                     <Tooltip text="Empty Tooltip" />
-                                 </tooltip></TextField>
+                                 </tooltip>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font></TextField>
                            </children>
                         </HBox>
                      </children>
