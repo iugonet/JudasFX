@@ -7,15 +7,6 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/jdom-2.0.5.jar"/>
 	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/JyConsole.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-api-11.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-coverage-11.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-data-11.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-main-11.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-metadata-11.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-opengis-11.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-referencing-11.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-render-11.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-shapefile-11.1.jar"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
 	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/jfxtras-agenda-8.0-r1.jar"/>
 	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/jfxtras-common-8.0-r1.jar"/>
@@ -36,5 +27,14 @@
 	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/jython.jar"/>
 	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/lombok.jar"/>
 	<classpathentry kind="lib" path="/home/iugonet/Downloads/felix-framework-4.4.1/bin/felix.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-api-12.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-coverage-12.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-data-12.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-main-12.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-metadata-12.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-opengis-12.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-referencing-12.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-render-12.1.jar"/>
+	<classpathentry kind="lib" path="/home/iugonet/JudasFX/lib/external/gt-shapefile-12.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
